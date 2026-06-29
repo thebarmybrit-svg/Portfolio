@@ -48,8 +48,12 @@
         width: $brkpoint-md;
     }
 
-     @include mq(large){
+    @include mq(large){
         width: $brkpoint-lg;
+    }
+
+    @include mq(Extra-large){
+        width: $brkpoint-xl;
     }
 
 }

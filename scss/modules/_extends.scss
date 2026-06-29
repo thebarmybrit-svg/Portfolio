@@ -33,7 +33,7 @@
 // Headlines
 
 %hdln-prim {
-  color: $white;
+  // color: $white;
   font-weight: $font-weight--bold;
   font-size: em($font-size--prim);
   line-height: em(46px, $font-size--prim);
@@ -41,7 +41,7 @@
 }
 
 %hdln-sec {
-  color: $white;
+  // color: $white;
   letter-spacing: $letter-space;
   font-weight: $font-weight--light;
   font-size: em($font-size--secn);
