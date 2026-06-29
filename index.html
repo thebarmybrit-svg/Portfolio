@@ -12,35 +12,75 @@
             <header>
                 <div class="inner">
                     <div class="image-container">
-                        <img>
+                        <img class="img--banner" src="" alt="">
                     </div>
                     <div class="header-container">
                         <div class="container">
                             <h1>My Name is Alexander Brown</h1>
                             <p>I am a Web developer</p>
+                            <a class="btn btn--nav" href="#">
+                                Scroll Down
+                                <em class="icon icon-circle-down"></em>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </header>
+            </header> 
         </div>
         
-        <div id="main">
-            <div id="sidebar-section">
-                SIDEBAR
-                - Icon
-                - About me
-                - My Portfolio
-                - Coding Examples
-                - SCS Scheme
-                - Contact me
-                    - Social icons
+        <div id="sidebar-section">
+            <div class="container">
+                <div class="row">
+                    <div class="initials">
+                        <a class="h1" href="index.html">AB</a>
+                    </div>
+                    <ul class="navigation">
+                        <li class="naviagion-item">
+                            <a href="about_me.html">About Me</a>
+                        </li>
+                        <li class="naviagion-item">
+                            <a href="coding_examples.html">Coding Examples</a>
+                        </li>
+                        <li class="naviagion-item">
+                            <a href="scs_scheme.html">SCS Scheme</a>
+                        </li>
+                    </ul>
+                    <div class="footer-social-logos">
+                        <a class="facebook btn--primary" href="#" target="_blank" rel="noopener">
+                            <span class="icon-facebook"></span>
+                        </a>
+                        <a class="linkedin btn--primary" href="#" target="_blank" rel="noopener">
+                            <span class="icon-linkedin"></span>
+                        </a>
+                        <a class="twitter btn--primary" href="#" target="_blank" rel="noopener">
+                            <span class="icon-twitter"></span>
+                        </a>
+                        <a class="instergram btn--primary" href="#" target="_blank" rel="noopener">
+                            <span class="icon-instagram"></span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            
+        </div>
+
+        <div id="main">
             <div id="projects-section">
-                PROJECTS
-                - image
-                - title
-                - view project w/ link
+                <div class="container">
+                    <div class="row">
+                        <div class="projects-example">
+                            <div class="image-container">
+                                <img class="img--project" src="" alt="">
+                            </div>
+                            <div class="block">
+                                <h2>TITLE</h2>
+                                <a class="view-project" href="#">
+                                    View Project
+                                    <em class="icon icon-circle-right"></em>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="contact-form-section">
@@ -52,37 +92,28 @@
                         <h4>email@email.com</h4>
                         <p>jbiughi uh u haiu aihfoihfiup waoj</p>
                     </div>
+                    <form class="contact" method="get" action="#" accept-charset="UTF8">
+                        <input type="text" placeholder="FirstName*">
+                        <input type="text" placeholder="Surname*">
+                        <input type="text" placeholder="Email Address*">
+                        <input type="text" placeholder="Subject">
+                        <input type="text" placeholder="Message">
+                        <button class="search-submit" type="submit">
+                            <span class="icon icon-search" aria-hidden="true"></span>
+                        </button>
+                    </form>
                 </div>
             </div>
-
-            CONTACT FORM
-            - Get in Touch
-                - description
-            - contact number
-            - email
-                - description
-            FORM
-            - First name
-            - Last name
-            - email
-            - subject
-            - message
-            - Submit button 
-
         </div>
         <footer>
-            Return to top
+            <div class="container">
+                <span class="btn-container">
+                    <a class="btn btn--nav" href="#">
+                        <em class="icon icon-circle-up"></em>
+                        Return to top
+                    </a>
+                </span>
+            </div>
         </footer>
-        Main 
-        - Banner image w/ text overlapping
-        - grid of previous projects
-        - contact form
-
-        Sidebar
-        
-
-        footer - back to top button
-
     </body>
-
 </html>

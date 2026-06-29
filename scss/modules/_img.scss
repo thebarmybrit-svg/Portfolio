@@ -9,7 +9,7 @@
         width: 100%;
         height: auto;
     }
-    
+    // @include m(project){}
     @include m(standard) {
         width: 100%;
         height: auto;
@@ -17,17 +17,6 @@
         border-radius: $br--default;
         object-fit: cover;
         object-position: center; 
-    }
-    @include m(partner) {
-        max-width: em($logo-size__partner--max-width);
-        padding: em($img-gutter-width);
-        filter: grayscale(100%);
-        opacity: 0.6;
-        transition: filter $trns-duration ease, opacity $trns-duration ease;
-        &:hover{
-            filter: grayscale(0);
-            opacity: 1;
-        }
     }
     @include m(avatar) {
         border-radius: $br--round;
@@ -45,18 +34,6 @@
         @include mq(large){
             width: fit-content;
         }
-    }
-    @include m(site-logo){
-        flex: 1 1 100%;
-        max-width: 100%;
-        height: auto;
-        transition: width $trns-duration ease-out;
-    }
-    @include m(footer-logo){
-        flex: 1 1 100%;
-        max-width: 100%;
-        height: auto;
-        transition: width $trns-duration ease-out;
     }
 }
 

@@ -63,18 +63,26 @@ $color-palettes: (
 // UI Colors
 
 $ui-colors: (
-
+	primary				: "",
+	secondary			: "",
+	primary-inverse		: ""
 );
-
-//Icons Coloured 
-$icons-coloured: (
-
-);
-
 
 // Icon locations
 
 $icon-locations: (
+	circle-down		: "circle-down.svg",
+	circle-left		: "circle-left.svg",
+	circle-right	: "circle-right.svg",
+	circle-up		: "circle-up.svg",
+	facebook		: "facebook.svg",
+	instagram		: "instagram.svg",
+	linkedin		: "linkedin.svg",
+	twitter			: "twitter.svg"
+);
+
+//Icons Coloured 
+$icons-coloured: (
 
 );
 
@@ -94,10 +102,6 @@ $icon-size__large: 32px;
 $img-size__standard--max-width-mobile: 750px;
 $img-size__standard--max-width-desktop: 370px;
 
-$logo-size__main--width: 370px;
-$logo-size__footer--width: 320px;
-$logo-size__partner--max-width: 275px;
-
 $img-gutter-width: 20px;
 
 // Border radius
@@ -112,7 +116,7 @@ $trns-duration  : .5s;
 // Path to Assets
 
 $path-img-icon--rel           : "../img/icons";
-$path-img-logo--rel           : "../img/logos";
+$path-img-proj--rel           : "../img/proj-img";
 
 // Grid
 
