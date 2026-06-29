@@ -1,0 +1,25 @@
+// ==========================================================================
+// Icons
+// ==========================================================================
+
+.icon{
+    @include icons($icon-locations, em($icon-size__standard), em($icon-size__standard));
+    @include icons-coloured($icons-coloured, em($icon-size__standard), em($icon-size__standard));
+    @include icons-whiten($icon-locations, em($icon-size__standard), em($icon-size__standard));
+    margin-top: 10px;
+}
+
+.icon-arrow-right, .icon-arrow-right--whiten{
+    margin-top: 0;
+    margin-left: 10px;
+    float: none !important; 
+}
+
+.icon-search{
+    margin: 5px;
+}
+
+// .hidden-checkbox:checked + .icon-menu {
+//     transition: $trns-duration;
+//     background-image: url('#{$path-img-icon--rel}/cross.svg');
+// }

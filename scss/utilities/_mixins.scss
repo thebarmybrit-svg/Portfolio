@@ -1,0 +1,223 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+
+// BEM selectors
+
+@mixin e($element) {
+	&__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Media queries
+
+@mixin mq($break) {
+  @if $break == "micro" {
+    @media (min-width: $brkpoint-xs){
+      @content;
+    }
+  }
+  @else if $break == "small" {
+    @media (min-width: $brkpoint-sm){
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $brkpoint-md) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $brkpoint-lg) {
+      @content;
+    }
+  }
+  @else if $break == "Extra-large" {
+    @media (min-width: $brkpoint-xl) {
+      @content;
+    }
+  }
+   @else {
+   	@error "Whoops! No value could be retrieved for `#{$break}`. "
+  }
+}
+
+     
+// Generate modifier color classes
+
+@mixin bg-colours($map) {
+	@each $theme, $colour in $map {
+		&--#{$theme} {
+			background-color: $colour;    
+		}
+	}
+}
+
+@mixin bg-colours-darken($map) {
+	@each $theme, $colour in $map {
+		&--#{$theme} {
+      background-color: darken($colour, 50%);   
+		}
+	}
+}
+@mixin bg-colour-hover($map) {
+	@each $theme, $colour in $map {
+		&--#{$theme} {
+      &:hover{
+        background-color: darken($colour, 20%);  
+      }
+		}
+	}
+}
+
+@mixin bg-colour-hover-darken($map) {
+	@each $theme, $colour in $map {
+		&--#{$theme} {
+      background-color: $colour;
+      &:hover{
+        background-color: darken($colour, 20%);  
+      }
+		}
+	}
+}
+
+@mixin border-colour-darken($map, $sz: 2px, $stl: solid) {
+	@each $theme, $colour in $map {
+		&--#{$theme} {
+      border-top: darken($colour, 20%) $sz $stl;  
+		}
+	}
+}
+
+// Generate icon image classes
+
+@mixin icons($map, $w, $h, $disp: inline-block) {
+	@each $icon, $img in $map {
+		&-#{$icon} {
+			background-image: url('#{$path-img-icon--rel}/#{$img}');
+      background-size: contain;
+    	background-repeat: no-repeat;
+	    width: $w;
+	    height: $h;
+	    display: $disp;
+		}
+	}
+}
+
+// Generate coloured icons
+
+@mixin icons-coloured($map, $w, $h, $disp: inline-block) {
+  @each $name, $props in $map {
+    $icon-url: '#{$path-img-icon--rel}/#{map-get($props, location)}';
+    &-#{$name}--coloured {
+      -webkit-mask-image: url($icon-url);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+
+      mask-image: url($icon-url);
+      mask-repeat: no-repeat;
+      mask-size: contain;
+
+      background-color: map-get($props, colour);
+      width: $w;
+	    height: $h;
+	    display: $disp;
+    }
+  }
+}
+
+@mixin icons-whiten($map, $w, $h, $disp: inline-block) {
+  @each $name, $img in $map {
+    $icon-url: '#{$path-img-icon--rel}/#{$img}';
+    &-#{$name}--whiten {
+      -webkit-mask-image: url($icon-url);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+
+      mask-image: url($icon-url);
+      mask-repeat: no-repeat;
+      mask-size: contain;
+
+      background-color: $white;
+      width: $w;
+	    height: $h;
+	    display: $disp;
+    }
+  }
+}
+
+
+// Gnerate Icon theme colours
+
+@mixin icon-themes($map){
+  @each $icon, $colour in $map{
+    &-#{$icon}{
+      color: $colour;
+      fill: $colour;
+    }
+  }
+}
+
+
+// Generating :before or :after pseudo-element shapes
+
+@mixin p-el(
+	$el,
+	$el-w: null,
+	$el-h: null) {
+	@if $el == "before" or $el == "after" { 
+	  &:#{$el} {
+		  @extend %pseudos;
+		  width: $el-w;
+	  	height: $el-h;
+	    @content;
+	  }
+	} 
+	@else {
+    @error "`#{$el}` is not a valid pseudo-element.";
+	}
+}
+      
+// Adjacent sibling margins
+
+@mixin doubly($margin: 1em) {
+	& + & {
+	  margin-left: $margin;
+    @content;
+	}
+}
+
+// Grid Columns
+     
+@mixin g-columns($columns: $g-col-count) {
+  @for $i from 1 through $columns {
+    $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;  
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+    &--#{$i} {
+      width: percentage($target / $context) !important;
+    }
+  }
+}
+
+@mixin dropdown-layout($width: 50%){
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  transition: visibility $trns-duration;
+}
+
+@mixin dropdown-layout-undo(){
+  display: block;
+  width: auto;
+  height: auto;
+  transform: none;
+  transition: none;
+}

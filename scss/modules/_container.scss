@@ -1,0 +1,78 @@
+
+// ==========================================================================
+// Containers
+// ==========================================================================
+
+// Image overlay 
+.item {
+  position: relative;
+  width: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: center; 
+
+    gap: $g-gutter-width;
+}
+
+
+//primary container
+.container{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0px auto;
+    padding: 0px 15px;
+    grid-gap: $g-gutter-width;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    
+    @include mq(micro){
+        min-width: $brkpoint-sm/1.5;
+    }
+    @include mq(small){
+        width: $brkpoint-sm;
+        grid-template-columns: repeat(auto-fit, minmax($g-col-width, 1fr));
+    }
+
+     @include mq(medium){
+        width: $brkpoint-md;
+    }
+
+     @include mq(large){
+        width: $brkpoint-lg;
+    }
+
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    }
+
+.section{
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+// Image container
+.img-container {
+    display: block; 
+    width: 100%;
+    height: auto;
+}

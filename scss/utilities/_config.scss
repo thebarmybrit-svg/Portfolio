@@ -1,0 +1,132 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Families
+
+$font-family--import        : "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+$font-family--primary       : "Poppins", sans-serif;
+$font-family--secondary     : sans-serif;
+
+// Font Weights
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+// Text
+
+$base__font-size    : 16px;
+$font-size--title   : 64px; 
+$font-size--prim    : 36px;
+$font-size--secn    : 24px;
+$font-size--thrd    : 19px;
+$font-size--small   : 12px;
+$base__line         : 24px;
+$letter-space       : 1px;
+
+// Descriptive Base Colors
+
+$white : #f5f5f5;
+$black : #0b0b0b;
+$grey  : #e5e5e5;
+
+
+// Colour usage
+
+// $colour-primary     : $deep-steel-blue;
+// $colour-secondary   : $darkest-sea;
+// $colour-font        : $meteorite-blue;
+// $colour-inverse     : $glowing-sun;
+$colour-shadow      : rgba($black, .2);
+
+// Color Palette Modifiers
+
+$color-palettes: (
+	grey: (
+		xx-light : lighten($grey, 43%),
+		x-light  : lighten($grey, 35%),
+	  light    : lighten($grey, 12%),
+	  base     : $grey,
+	 	dark     : darken($grey, 8%),
+	 	x-dark   : darken($grey, 16%)
+	),
+	black: (
+		light    : lighten($black, 10%),
+		base     : $black,
+		dark     : darken($black, 10%)
+	)
+);
+
+// UI Colors
+
+$ui-colors: (
+
+);
+
+//Icons Coloured 
+$icons-coloured: (
+
+);
+
+
+// Icon locations
+
+$icon-locations: (
+
+);
+
+// Icon Themes
+
+$icon-themes: (
+
+);
+
+// Image sizes
+
+$icon-size__small: 15px;
+$icon-size__standard: 25px;
+$icon-size__large: 32px;
+// $icon-size__largest: 75px;
+
+$img-size__standard--max-width-mobile: 750px;
+$img-size__standard--max-width-desktop: 370px;
+
+$logo-size__main--width: 370px;
+$logo-size__footer--width: 320px;
+$logo-size__partner--max-width: 275px;
+
+$img-gutter-width: 20px;
+
+// Border radius
+
+$br--default    : .4em;
+$br--round      : 50%;
+
+// Transitions
+
+$trns-duration  : .5s;
+
+// Path to Assets
+
+$path-img-icon--rel           : "../img/icons";
+$path-img-logo--rel           : "../img/logos";
+
+// Grid
+
+$g-col-width        : 65px;
+$g-gutter-width     : 25px;
+$g-col-count        : 12;
+$g-col-count-lg     : 16;
+$g-cont-max-w       : 1260px;
+
+
+// Breakpoints
+
+$brkpoint-xs    : 280px;
+$brkpoint-sm    : 576px;
+$brkpoint-md    : 768px;
+$brkpoint-lg    : 992px;
+$breakpoint-xl  : 1200px;
