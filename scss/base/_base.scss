@@ -1,0 +1,53 @@
+// ==========================================================================
+// Base
+// ==========================================================================
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family--primary;
+    font-size: $base__font-size;
+    line-height: ($base__line/$base__font-size);
+    margin: 0;
+    background-color: $white;
+    overflow-x: hidden;
+}
+
+h1, .h1 {
+    @extend %hdln-prim;
+}
+
+h2, .h2 {
+    @extend %hdln-sec;
+}
+
+h1, .h1, h2, .h2, h3, h4, p, .p{
+    color: $colour-font;
+}
+
+a {
+    text-decoration: none;
+    font-weight: $font-weight--medium;
+    color: $meteorite-blue;
+}
+
+p, .p{
+    font-size: $font-weight--light;
+}
+
+
+footer {
+    @extend .centered;
+    @include mq(small){
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    background-color: $colour-primary;
+    color: $white;
+    padding: em(30px) 0 0;
+    position: relative;
+}
+
+
