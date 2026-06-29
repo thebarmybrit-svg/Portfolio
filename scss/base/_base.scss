@@ -11,7 +11,8 @@ body {
     font-size: $base__font-size;
     line-height: ($base__line/$base__font-size);
     margin: 0;
-    background-color: $white;
+    background-color: $colour-primary;
+    color: $colour-font;
     overflow-x: hidden;
 
     display: grid;
@@ -32,8 +33,16 @@ ul {
     padding-left: 0;
     li{
         list-style: none;
-        
     }
+}
+
+a{
+    color: $colour-links;
+    text-decoration: none;
+    &:hover, &:focus{
+        text-decoration: underline;
+    }
+    
 }
 
 footer {
