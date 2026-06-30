@@ -39,6 +39,7 @@ $dark-coal		: #2D3F42;
 $icy-blue		: #A9C2C7;
 $cinereous		: #9e7f7a;
 $amathyst-dusk	: #60476b;
+$mint-green		: #4fc279;
 
 
 // Colour usage
@@ -71,10 +72,11 @@ $color-palettes: (
 
 // UI Colors
 
-$ui-colors: (
-	primary				: "",
-	secondary			: "",
-	primary-inverse		: ""
+$ui-colours: (
+	primary				: $colour-primary,
+	secondary			: $colour-secondary,
+	primary-inverse		: $colour-inverse,
+	nav					: $mint-green
 );
 
 // Icon locations

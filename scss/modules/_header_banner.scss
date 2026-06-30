@@ -3,12 +3,18 @@
 // ==========================================================================
 
 #header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
     .inner {
         display: flex;
         position: relative;
+        justify-content: center;
+        align-items: center;
         width: 100vw;
-        height: 300px;
+        height: 80vh;
         overflow: hidden;
 
         .image-container{
@@ -21,10 +27,31 @@
 
         .content{
             background-color: rgba(0, 0, 0, 0.5);
+            .grid{
+                align-items: center;
+            }
+        }
+
+        .btn{
+            color: $white;
+            
+            position: relative;
+            bottom: auto;
+            left: auto;
+            transform: none;
+            margin-top: 20px; 
         }
 
         @include mq(small){
             height: auto;
+        }
+        @include mq(medium){
+            .btn{
+                position: absolute; 
+                bottom: 20px; 
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 

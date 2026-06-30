@@ -24,12 +24,11 @@
 
   .initials {
 
-    width: 100%; // Spans the full width of the container layout
-    max-width: 100vw; // Limits box stretching on wide panels
-    margin: 0 auto; // Centers the box horizontally
+    width: 100%;
+    max-width: 100vw; 
+    margin: 0 auto; 
     border: 3px solid $colour-secondary;
     padding: 10px 0;
-    // align-self: center;
     text-align: center;
 
     .h1 {
@@ -60,6 +59,7 @@
   .sidebar-social-logos {
     display: flex;
     align-self: center;
+    height: $icon-size__standard;
     gap: 5px;
   }
 

@@ -21,11 +21,11 @@ body {
     padding-top: $sidebar-height;
 
     @include mq(small){
-        padding-left: em($sidebar-width/1.5) !important;
+        padding-left: em($sidebar-width/1.75) !important;
         padding-top: 0;
     }
     @include mq(large){
-        padding-left: em($sidebar-width-lg/1.5) !important;
+        padding-left: em($sidebar-width-lg/1.75) !important;
     }
 }
 
