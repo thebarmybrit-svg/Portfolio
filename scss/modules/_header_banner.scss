@@ -2,3 +2,26 @@
 // Header Banner
 // ==========================================================================
 
+#header{
+
+    .inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        .image-container{
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .content{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+    }
+
+}

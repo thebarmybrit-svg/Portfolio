@@ -1,0 +1,20 @@
+// ==========================================================================
+// Grid Columns
+// ==========================================================================
+
+[class^="grid__col-"]{
+    @include g-columns;
+    position: relative;
+    @include mq(small)  {
+        margin-top: em(12px);
+        margin-bottom: em(12px);
+    }
+    @include mq(medium){
+        @include doubly(percentage($g-gutter-width / $context));    
+        float: left;
+        min-height: 1px;
+        &:last-of-type {
+        float: right;
+        }
+    }
+}

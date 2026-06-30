@@ -35,10 +35,8 @@
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     align-items: center;
-    
-    @include mq(micro){
-        min-width: $brkpoint-sm/1.5;
-    }
+    width: $brkpoint-xs;
+
     @include mq(small){
         width: $brkpoint-sm;
         grid-template-columns: repeat(auto-fit, minmax($g-col-width, 1fr));
@@ -52,7 +50,7 @@
         width: $brkpoint-lg;
     }
 
-    @include mq(Extra-large){
+    @include mq(extra-large){
         width: $brkpoint-xl;
     }
 
@@ -74,7 +72,7 @@
     margin-right: -50vw;
 }
 
-// Image container
+// Image container base
 .img-container {
     display: block; 
     width: 100%;

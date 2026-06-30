@@ -1,0 +1,44 @@
+// ==========================================================================
+// Hidden Sections
+// ==========================================================================
+
+.hidden-all{
+    display: none !important;
+}
+
+.hidden-xs {
+    @include mq(micro){
+        display: none !important;
+    }
+}
+
+.hidden-sm {
+    @include mq(small){
+        display: none !important;
+    }
+}
+
+.hidden-md {
+    @include mq(medium){
+        display: none !important;
+    }
+}
+
+.hidden-lg {
+    @include mq(large){
+        display: none !important;
+    }
+}
+
+.hidden-xl {
+    @include mq(extra-large){
+        display: none !important;
+    }
+}
+
+.visible-xs{
+    display: none !important;
+    @include mq(micro){
+        display: block !important;
+    }
+}

@@ -20,6 +20,11 @@
 
 @mixin mq($break) {
   @if $break == "micro" {
+    @media (min-width: 1) and (max-width: ($brkpoint-xs - 1)){
+      @content;
+    }
+  }
+  @else if $break == "mobile" {
     @media (min-width: $brkpoint-xs){
       @content;
     }
@@ -39,7 +44,7 @@
       @content;
     }
   }
-  @else if $break == "Extra-large" {
+  @else if $break == "extra-large" {
     @media (min-width: $brkpoint-xl) {
       @content;
     }

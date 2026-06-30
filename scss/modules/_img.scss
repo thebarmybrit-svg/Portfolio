@@ -24,16 +24,10 @@
         margin-right: auto;
         margin-top: em(24px);
     }
-    @include m(cover) {
-        display: block;
+    @include m(banner) {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        justify-content: center;
-        align-items: center; 
-        @include mq(large){
-            width: fit-content;
-        }
+        height: auto;
+        display: block;
     }
 }
 
