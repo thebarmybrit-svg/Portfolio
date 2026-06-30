@@ -13,5 +13,11 @@
     @extend .centered;
     width: 90%;
     max-width: 100%;
+
+    @include mq(small) {
+        &:has([class^="grid__col-"]){
+            flex-direction: row;
+        } 
+    }
 }
 

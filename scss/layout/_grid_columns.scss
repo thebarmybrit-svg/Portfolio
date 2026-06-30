@@ -2,8 +2,37 @@
 // Grid Columns
 // ==========================================================================
 
-[class^="grid__col-"]{
+.grid__col-xs {
+  @include mq(micro){
     @include g-columns;
+  }
+}
+
+.grid__col-sm {
+  @include mq(small){
+    @include g-columns;
+  }
+}
+
+.grid__col-md {
+  @include mq(medium) {
+    @include g-columns;
+  }
+}
+
+.grid__col-lg{
+  @include mq(large){
+    @include g-columns;
+  }
+}
+
+.grid__col-xl{
+  @include mq(extra-large){
+    @include g-columns;
+  }
+}
+
+[class^="grid__col-"]{
     position: relative;
     @include mq(small)  {
         margin-top: em(12px);

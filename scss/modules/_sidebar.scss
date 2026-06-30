@@ -12,6 +12,7 @@
   height: $sidebar-height;
   z-index: 1000; 
   background-color: $white;
+  border-bottom: 5px $black dashed;
   overflow-x: hidden;
   
   .grid {
@@ -68,6 +69,8 @@
     bottom: 0;
     height: 100%;
     width: $sidebar-width !important;
+    border-bottom: none;
+    border-right: 5px $black dashed;
 
     .sidebar-container{
         display: grid;
@@ -104,6 +107,7 @@
             }
     }
   }
+
   @include mq(large){
     width: $sidebar-width-lg !important;
 
