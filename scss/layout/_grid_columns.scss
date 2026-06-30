@@ -22,13 +22,13 @@
 
 .grid__col-lg{
   @include mq(large){
-    @include g-columns;
+    @include g-columns($g-col-count-lg);
   }
 }
 
 .grid__col-xl{
   @include mq(extra-large){
-    @include g-columns;
+    @include g-columns($g-col-count-lg);
   }
 }
 

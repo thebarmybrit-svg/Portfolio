@@ -35,7 +35,7 @@
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     align-items: center;
-    width: $brkpoint-xs;
+    min-width: $brkpoint-xs;
 
     @include mq(small){
         width: $brkpoint-sm;

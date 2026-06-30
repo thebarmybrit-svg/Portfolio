@@ -82,6 +82,7 @@ $ui-colours: (
 // Icon locations
 
 $icon-locations: (
+	envelop			: "envelop.svg",
 	circle-down		: "circle-down.svg",
 	circle-left		: "circle-left.svg",
 	circle-right	: "circle-right.svg",
@@ -131,7 +132,7 @@ $path-img-proj--rel           : "../img/proj-img";
 
 // Grid
 
-$g-col-width        : 65px;
+$g-col-width        : 100px;
 $g-gutter-width     : 25px;
 $g-col-count        : 12;
 $g-col-count-lg     : 16;
