@@ -5,12 +5,13 @@
 #header{
 
     .inner {
+        display: flex;
         position: relative;
-        width: 100%;
+        width: 100vw;
+        height: 300px;
         overflow: hidden;
 
         .image-container{
-            width: 100vw;
             position: relative;
             left: 50%;
             right: 50%;
@@ -22,6 +23,9 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
+        @include mq(small){
+            height: auto;
+        }
     }
 
 }

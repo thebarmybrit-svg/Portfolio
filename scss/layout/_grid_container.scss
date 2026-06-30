@@ -3,19 +3,15 @@
 // ==========================================================================
 
 .grid {
-  display: flex;
-  max-width: 100%;
-  flex-wrap: wrap;
-  justify-content: center; 
-  align-items: stretch;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: stretch;
+    flex-direction: column;  
 
-  @extend %clearfix;
-  @extend .centered;
-  width: 90%;
- 
-  @include mq(small) {
-    flex-direction: row;
-  }
+    @extend %clearfix;
+    @extend .centered;
+    width: 90%;
+    max-width: 100%;
 }
 

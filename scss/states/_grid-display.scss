@@ -3,7 +3,7 @@
 // ==========================================================================
 
 .is-displayed-mobile {
-  @include mq(small) {
+  @include mq(micro) {
     display: block;
     @at-root (with: media) {
       .is-hidden-mobile {
@@ -11,7 +11,7 @@
       }
     }
   }
-  @include mq(medium) {
+  @include mq(small) {
     display: none;
   }	
 }

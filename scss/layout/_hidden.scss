@@ -6,26 +6,26 @@
     display: none !important;
 }
 
-.hidden-xs {
-    @include mq(micro){
+.hidden-mobile {
+    @include mq(up-to-small){
         display: none !important;
     }
 }
 
 .hidden-sm {
-    @include mq(small){
+    @include mq(small-only){
         display: none !important;
     }
 }
 
 .hidden-md {
-    @include mq(medium){
+    @include mq(medium-only){
         display: none !important;
     }
 }
 
 .hidden-lg {
-    @include mq(large){
+    @include mq(large-only){
         display: none !important;
     }
 }
@@ -36,9 +36,9 @@
     }
 }
 
-.visible-xs{
+.visible-mobile{
     display: none !important;
-    @include mq(micro){
+    @include mq(up-to-small){
         display: block !important;
     }
 }

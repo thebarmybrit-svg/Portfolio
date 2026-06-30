@@ -41,15 +41,12 @@
         width: $brkpoint-sm;
         grid-template-columns: repeat(auto-fit, minmax($g-col-width, 1fr));
     }
-
      @include mq(medium){
         width: $brkpoint-md;
     }
-
     @include mq(large){
         width: $brkpoint-lg;
     }
-
     @include mq(extra-large){
         width: $brkpoint-xl;
     }
@@ -72,9 +69,11 @@
     margin-right: -50vw;
 }
 
+
+
 // Image container base
-.img-container {
-    display: block; 
-    width: 100%;
-    height: auto;
-}
+// .img-container {
+//     display: block; 
+//     width: 100%;
+//     height: auto;
+// }

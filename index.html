@@ -18,8 +18,9 @@
                         <div class="header-container">
                             <div class="container">
                                 <div class="grid">
-                                    <h1>My Name is Alexander Brown</h1>
-                                    <p>I am a Web developer</p>
+                                    <h1 class="hidden-sm hidden-md hidden-lg hidden-xl">Alexander Brown's Portfolio</h1>
+                                    <h1 class="hidden-mobile">My Name is Alexander Brown</h1>
+                                    <p class="hidden-mobile">I am a Web developer, and this is my portfolio.</p>
                                     <a class="btn btn--nav" href="#">
                                         Scroll Down
                                         <em class="icon icon-circle-down"></em>
@@ -33,7 +34,7 @@
         </div>
         
         <div id="sidebar-section">
-            <div class="container">
+            <div class="sidebar-container">
                 <div class="grid">
                     <div class="initials">
                         <a class="h1" href="index.html">AB</a>
@@ -49,7 +50,7 @@
                             <a href="scs_scheme.html">SCS Scheme</a>
                         </li>
                     </ul>
-                    <div class="footer-social-logos">
+                    <div class="sidebar-social-logos hidden-mobile">
                         <a class="facebook btn--primary" href="#" target="_blank" rel="noopener">
                             <span class="icon-facebook"></span>
                         </a>
@@ -79,7 +80,31 @@
                                 <img class="img img--project" src="img/1560x878.png" alt="Webpage Project">
                             </div>
                             <div class="block">
-                                <h2>TITLE</h2>
+                                <h2>TITLE_01</h2>
+                                <a class="view-project" href="#">
+                                    View Project
+                                    <em class="icon icon-circle-right"></em>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects-example">
+                            <div class="image-container">
+                                <img class="img img--project" src="img/1560x878.png" alt="Webpage Project">
+                            </div>
+                            <div class="block">
+                                <h2>TITLE_02</h2>
+                                <a class="view-project" href="#">
+                                    View Project
+                                    <em class="icon icon-circle-right"></em>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects-example">
+                            <div class="image-container">
+                                <img class="img img--project" src="img/1560x878.png" alt="Webpage Project">
+                            </div>
+                            <div class="block">
+                                <h2>TITLE_03</h2>
                                 <a class="view-project" href="#">
                                     View Project
                                     <em class="icon icon-circle-right"></em>
@@ -92,23 +117,25 @@
 
             <div id="contact-form-section">
                 <div class="container">
-                    <div class="contact-information">
-                        <h3>Get in Touch</h3>
-                        <p>uihgUHWGHEH Hh ug aiughiuhas gouaoigh</p>
-                        <h3>00000000000</h3>
-                        <h4>email@email.com</h4>
-                        <p>jbiughi uh u haiu aihfoihfiup waoj</p>
+                    <div class="grid">
+                        <div class="contact-information">
+                            <h3>Get in Touch</h3>
+                            <p>uihgUHWGHEH Hh ug aiughiuhas gouaoigh</p>
+                            <h3>00000000000</h3>
+                            <h4>email@email.com</h4>
+                            <p>jbiughi uh u haiu aihfoihfiup waoj</p>
+                        </div>
+                        <form class="contact" method="get" action="#" accept-charset="UTF8">
+                            <input type="text" placeholder="ForeName*">
+                            <input type="text" placeholder="Surname*">
+                            <input type="text" placeholder="Email Address*">
+                            <input type="text" placeholder="Subject">
+                            <input type="text" placeholder="Message">
+                            <button class="search-submit" type="submit">
+                                <span class="icon icon-search" aria-hidden="true"></span>
+                            </button>
+                        </form>
                     </div>
-                    <form class="contact" method="get" action="#" accept-charset="UTF8">
-                        <input type="text" placeholder="ForeName*">
-                        <input type="text" placeholder="Surname*">
-                        <input type="text" placeholder="Email Address*">
-                        <input type="text" placeholder="Subject">
-                        <input type="text" placeholder="Message">
-                        <button class="search-submit" type="submit">
-                            <span class="icon icon-search" aria-hidden="true"></span>
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@
         height: auto;
     }
     // @include m(project){}
-    @include m(standard) {
+    @include m(project) {
         width: 100%;
         height: auto;
         border: 1px solid palette(grey, x-light);
@@ -25,9 +25,14 @@
         margin-top: em(24px);
     }
     @include m(banner) {
-        width: 100%;
-        height: auto;
+        width: auto;
+        // height: 300px;
+        height: 100vh;
         display: block;
+        @include mq(small){
+            width: 100vw;
+            height: auto;
+        }
     }
 }
 

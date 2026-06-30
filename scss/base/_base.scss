@@ -7,9 +7,7 @@
 }
 
 body {
-    font-family: $font-family--primary;
-    font-size: $base__font-size;
-    line-height: ($base__line/$base__font-size);
+    @extend %font-base;
     margin: 0;
     min-height: 100vh;
     background-color: $colour-primary;
@@ -19,14 +17,24 @@ body {
     transition: grid-template-columns 0.3s ease;
     overflow-x: hidden;
     width: 100vw;
+    padding-left: 0;
+    padding-top: $sidebar-height;
+
+    @include mq(small){
+        padding-left: em($sidebar-width/1.5) !important;
+        padding-top: 0;
+    }
+    @include mq(large){
+        padding-left: em($sidebar-width-lg/1.5) !important;
+    }
 }
 
 h1, .h1 {
-    @extend %hdln-prim;
+    @extend %font-prim;
 }
 
 h2, .h2 {
-    @extend %hdln-sec;
+    @extend %font-sec;
 }
 
 ul {
@@ -45,14 +53,14 @@ a{
     
 }
 
-footer {
-    @extend .centered;
-    @include mq(small){
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-    padding: em(30px) 0 0;
-    position: relative;
-}
+// footer {
+//     @extend .centered;
+//     @include mq(small){
+//         margin-left: 0%;
+//         margin-right: 0%;
+//     }
+//     padding: em(30px) 0 0;
+//     position: relative;
+// }
 
 
