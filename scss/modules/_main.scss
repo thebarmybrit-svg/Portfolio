@@ -1,0 +1,24 @@
+// ==========================================================================
+// Main Container
+// ==========================================================================
+
+#main{
+    width: 100%;
+
+    @include mq(small){
+        // max-width: $brkpoint-sm;
+        // padding-left: em($sidebar-width) !important;
+
+    }
+    @include mq(medium){
+        // width: calc($brkpoint-md - #{$sidebar-width});
+    }
+
+    @include mq(large){
+        // width: calc($brkpoint-lg - #{$sidebar-width-lg});
+        // padding-left: em($sidebar-width-lg/1) !important;
+    }
+    @include mq(extra-large){
+        // width: calc($brkpoint-xl - #{$sidebar-width-lg});
+    }
+}
