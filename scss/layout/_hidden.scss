@@ -6,31 +6,31 @@
     display: none !important;
 }
 
-.hidden-mobile {
+.hidden-mobile{
     @include mq(up-to-small){
         display: none !important;
     }
 }
 
-.hidden-sm {
+.hidden-sm{
     @include mq(small-only){
         display: none !important;
     }
 }
 
-.hidden-md {
+.hidden-md{
     @include mq(medium-only){
         display: none !important;
     }
 }
 
-.hidden-lg {
+.hidden-lg{
     @include mq(large-only){
         display: none !important;
     }
 }
 
-.hidden-xl {
+.hidden-xl{
     @include mq(extra-large){
         display: none !important;
     }

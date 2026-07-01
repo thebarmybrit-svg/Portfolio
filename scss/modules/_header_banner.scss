@@ -3,18 +3,12 @@
 // ==========================================================================
 
 #header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    // @extend %center-flex;
 
     .inner {
-        display: flex;
+        @extend %center-flex;
         position: relative;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 80vh;
+        height: 100vh;
         overflow: hidden;
 
         .image-container{
@@ -34,7 +28,6 @@
 
         .btn{
             color: $white;
-            
             position: relative;
             bottom: auto;
             left: auto;

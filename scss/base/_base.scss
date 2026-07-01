@@ -18,11 +18,11 @@ body {
     overflow-x: hidden;
     width: 100vw;
     padding-left: 0;
-    padding-top: $sidebar-height;
+    // padding-top: $sidebar-height;
 
     @include mq(small){
         padding-left: em($sidebar-width/1.75) !important;
-        padding-top: 0;
+        // padding-top: 0;
     }
     @include mq(large){
         padding-left: em($sidebar-width-lg/1.75) !important;

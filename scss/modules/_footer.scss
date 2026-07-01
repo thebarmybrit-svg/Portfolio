@@ -2,3 +2,13 @@
 // Footer
 // ==========================================================================
 
+footer{
+    // @extend %center-flex;
+    // @extend .centered;
+    @include mq(small){
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    padding: em(30px) 0 0;
+    position: relative;
+}

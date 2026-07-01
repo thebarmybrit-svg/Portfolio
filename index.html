@@ -11,6 +11,7 @@
         <div id="header">
             <header>
                 <div class="inner">
+                    
                     <div class="img-container">
                         <img class="img img--banner" src="img/data-600x243.jpg" alt="neon blue 1s and 0s on a dark background">
                     </div>
@@ -18,6 +19,12 @@
                         <div class="header-container">
                             <div class="container">
                                 <div class="grid">
+                                    <div class="nav-toggle hidden-sm hidden-md hidden-lg hidden-xl">
+                                        <a class="btn btn--toggle">
+                                            TEST
+                                            <span class="icon icon-hamburger"></span>
+                                        </a>
+                                    </div>
                                     <h1 class="hidden-sm hidden-md hidden-lg hidden-xl">Alexander Brown's Portfolio</h1>
                                     <h1 class="hidden-mobile">My Name is Alexander Brown</h1>
                                     <p class="hidden-mobile">I am a Web developer, and this is my portfolio.</p>
@@ -33,7 +40,7 @@
             </header> 
         </div>
         
-        <div id="sidebar-section">
+        <div id="sidebar-section" class="hidden-mobile">
             <div class="sidebar-container">
                 <div class="grid">
                     <div class="initials">
@@ -44,13 +51,19 @@
                             <a href="about_me.html">About Me</a>
                         </li>
                         <li class="naviagion-item">
+                            <a href="index.html#projects-section">Projects</a>
+                        </li>
+                        <li class="naviagion-item">
                             <a href="coding_examples.html">Coding Examples</a>
                         </li>
                         <li class="naviagion-item">
                             <a href="scs_scheme.html">SCS Scheme</a>
                         </li>
+                        <li class="naviagion-item">
+                            <a href="index.html#contact-form-section">Contact Me</a>
+                        </li>
                     </ul>
-                    <div class="sidebar-social-logos hidden-mobile">
+                    <div class="sidebar-social-logos">
                         <a class="facebook btn--primary" href="#" target="_blank" rel="noopener">
                             <span class="icon-facebook"></span>
                         </a>
@@ -118,14 +131,14 @@
             <div id="contact-form-section">
                 <div class="container">
                     <div class="grid">
-                        <div class="grid__col-lg--5 contact-information">
+                        <div class="grid__col-md--4 grid__col-lg--5 contact-information">
                             <h3>Get in Touch</h3>
                             <p>uihgUHWGHEH Hh ug aiughiuhas gouaoigh</p>
                             <h3>00000000000</h3>
                             <h4>email@email.com</h4>
                             <p>jbiughi uh u haiu aihfoihfiup waoj</p>
                         </div>
-                        <form class="grid__col-lg--8 contact-form" method="get" action="#" accept-charset="UTF8">
+                        <form class="grid__col-md--6 grid__col-lg--8 contact-form" method="get" action="#" accept-charset="UTF8">
                             <input type="text" placeholder="ForeName*">
                             <input type="text" placeholder="Surname*">
                             <input type="text" placeholder="Email Address*">

@@ -3,13 +3,6 @@
 // ==========================================================================
 
 .img {
-
-    [class*="img--"] > & {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-    // @include m(project){}
     @include m(project) {
         width: 100%;
         height: auto;
@@ -25,14 +18,9 @@
         margin-top: em(24px);
     }
     @include m(banner) {
+        display: inline-block;
         width: auto;
-        // height: 300px;
         height: 100vh;
-        display: block;
-        @include mq(small){
-            width: 100vw;
-            height: auto;
-        }
     }
 }
 

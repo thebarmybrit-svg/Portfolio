@@ -7,28 +7,40 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  width: 100%;
-  height: $sidebar-height;
+  bottom: 0;
+  height: 100%;
+  width: $sidebar-width !important;
+  background-color: $colour-secondary;
+  border-right: 5px $black dashed;
   z-index: 1000; 
-  background-color: $white;
-  border-bottom: 5px $black dashed;
   overflow-x: hidden;
+
+  .sidebar-container{
+    display: grid;
+    grid-template-columns: auto;
+    // margin: 0px auto;
+    padding: 0px 15px;
+    grid-gap: $g-gutter-width;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    height: 100%;
+    padding: 10px 10px 0;
+  }
   
   .grid {
     height: 100%;
-    flex-direction: row;
+    flex-direction: column; 
     padding: 0;
-    justify-content: space-between;
-    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;     
   }
 
   .initials {
-
     width: 100%;
     max-width: 100vw; 
-    margin: 0 auto; 
-    border: 3px solid $colour-secondary;
+    margin: 0 0 30px 0;
+    border: 3px solid $black;
     padding: 10px 0;
     text-align: center;
 
@@ -41,18 +53,20 @@
   }
 
   .navigation {
-    display: flex;
-    gap: $g-gutter-width;
-    padding: 0;
+    display: block;
+    flex-direction: column;
     margin: 0;
+    padding-top: 10px auto;
+    gap: 0;
+    width: 100%;
     align-self: center;
 
     .naviagion-item {
-        margin-bottom: 15px;
-        text-align: center;    
-        a {
-            display: block;
-        }
+      margin-bottom: 15px;
+      text-align: center;    
+      a {
+        display: block;
+      }
     }
   }
 
@@ -64,58 +78,14 @@
     gap: 5px;
   }
 
-  @include mq(small){
-    right: auto;
-    bottom: 0;
-    height: 100%;
-    width: $sidebar-width !important;
-    border-bottom: none;
-    border-right: 5px $black dashed;
-
-    .sidebar-container{
-        display: grid;
-        grid-template-columns: auto;
-        // margin: 0px auto;
-        padding: 0px 15px;
-        grid-gap: $g-gutter-width;
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-        align-items: center;
-        height: 100%;
-        padding: 10px 10px 0;
-    }
-
-    .grid {
-      flex-direction: column; 
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
-
-    .initials{
-        margin: 0 0 30px 0;
-    }
-
-    .navigation {
-        display: block;
-        flex-direction: column;
-        padding: 10px auto;
-        gap: 0;
-        // margin: 30px 0;
-
-        .naviagion-item {
-            margin-bottom: 15px;    
-            }
-    }
-  }
-
   @include mq(large){
     width: $sidebar-width-lg !important;
 
     .sidebar-container{
-        padding-top: 20px 20px 0 0;
+      padding-top: 20px 20px 0 0;
     }
      .sidebar-social-logos {
-        gap: 15px;
+      gap: 15px;
      }
   }
 }
