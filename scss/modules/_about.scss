@@ -4,6 +4,10 @@
 
 #about_me{
 
+    .grid{
+        align-items: flex-start;
+    }
+
     ul{
         display: flex;
         flex-direction: column;

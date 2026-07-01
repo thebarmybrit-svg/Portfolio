@@ -5,7 +5,40 @@
 
 #contact-form-section{
 
-    border: 5px $black solid;
 
+    .contact-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $g-gutter-width;
+        position: relative;
 
+        textarea {
+            flex: 1 1 calc(50% - 15px);
+            padding: 10px;
+        }
+
+        .contact-firstname,
+        .contact-surname {
+           flex: 1 1 calc(50% - 7.5px) !important;
+        }   
+
+        .contact-email,
+        .contact-subject,
+        .contact-message {
+            flex: 1 0 100%;
+        }
+    
+    }
+
+    .contact-message {
+        flex: 1 0 100% !important;
+        min-height: 150px;
+    }
+
+    .contact-submit {
+        flex: 0 0 auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    
 }

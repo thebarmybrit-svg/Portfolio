@@ -3,6 +3,7 @@
 // ==========================================================================
 
 #main{
+    height: 100%;
     width: 100%;
     @include mq(small){
         padding-left: nav-marg($sidebar-width, $sidebar-width-marg);
