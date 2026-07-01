@@ -8,12 +8,14 @@
     flex-direction: column;  
 
     @extend %clearfix;
-    @extend .centered;
+    // @extend .centered;
     width: 100%;
     max-width: 100%;
 
     @include mq(small) {
         &:has([class^="grid__col-"]){
+            flex-grow: 0;
+            flex-shrink: 1;
             flex-direction: row;
         } 
     }

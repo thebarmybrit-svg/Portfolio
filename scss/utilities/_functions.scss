@@ -26,3 +26,9 @@
   $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
   @return $g-context;
 }
+
+// Dynamic main content size depending on side bar
+
+@function nav-marg($sidebar-width, $size-alteration){
+  @return ($sidebar-width/$size-alteration);
+}

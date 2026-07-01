@@ -35,22 +35,21 @@
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     align-items: center;
-    min-width: $brkpoint-xs;
+    width: 100%;
 
     @include mq(small){
-        width: $brkpoint-sm;
+        max-width: $brkpoint-sm;
         grid-template-columns: repeat(auto-fit, minmax($g-col-width, 1fr));
     }
      @include mq(medium){
-        width: $brkpoint-md;
+        max-width: $brkpoint-md;
     }
     @include mq(large){
-        width: $brkpoint-lg;
+        max-width: $brkpoint-lg;
     }
     @include mq(extra-large){
-        width: $brkpoint-xl;
+        max-width: $brkpoint-xl;
     }
-
 }
 
 .content-container{

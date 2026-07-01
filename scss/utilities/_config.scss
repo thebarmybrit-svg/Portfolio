@@ -112,7 +112,7 @@ $icon-size__large: 32px;
 // $icon-size__largest: 75px;
 
 $img-size__standard--max-width-mobile: 750px;
-$img-size__standard--max-width-desktop: 370px;
+$img-size__standard--max-width-desktop: 400px;
 
 $img-gutter-width: 20px;
 
@@ -132,8 +132,8 @@ $path-img-proj--rel           : "../img/proj-img";
 
 // Grid
 
-$g-col-width        : 100px;
-$g-gutter-width     : 25px;
+$g-col-width        : 120px;
+$g-gutter-width     : 15px;
 $g-col-count        : 12;
 $g-col-count-lg     : 16;
 $g-cont-max-w       : 1200px;
@@ -150,6 +150,8 @@ $brkpoint-xl    : 1200px;
 
 //Element dimentions
 
-$sidebar-height		: 135px;
-$sidebar-width		: 150px;
-$sidebar-width-lg	: 200px;
+$sidebar-height			: 135px;
+$sidebar-width			: 150px;
+$sidebar-width-lg		: 200px;
+$sidebar-width-marg		: 1.5;
+$sidebar-width-head		: 2;
