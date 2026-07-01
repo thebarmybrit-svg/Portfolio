@@ -28,7 +28,7 @@
 		"../scss/modules/_projects.scss",
 		"../scss/modules/_contact_form.scss",
 		"../scss/modules/_about.scss",
-		"../scss/modules/_scs_scheme",
+		"../scss/modules/_scs_scheme.scss",
 		"../scss/modules/_footer.scss",
 		"../scss/states/_index.scss",
 		"../scss/states/_grid-display.scss",
