@@ -76,21 +76,25 @@ $ui-colours: (
 	primary				: $colour-primary,
 	secondary			: $colour-secondary,
 	primary-inverse		: $colour-inverse,
-	nav					: $mint-green
+	nav					: $mint-green,
+	toggle				: $colour-secondary
 );
 
 // Icon locations
 
 $icon-locations: (
-	envelop			: "envelop.svg",
-	circle-down		: "circle-down.svg",
-	circle-left		: "circle-left.svg",
-	circle-right	: "circle-right.svg",
-	circle-up		: "circle-up.svg",
-	facebook		: "facebook.svg",
-	instagram		: "instagram.svg",
-	linkedin		: "linkedin.svg",
-	twitter			: "twitter.svg"
+	briefcase			: "briefcase.svg",
+	circle-down			: "circle-down.svg",
+	circle-left			: "circle-left.svg",
+	circle-right		: "circle-right.svg",
+	circle-up			: "circle-up.svg",
+	envelop				: "envelop.svg",
+	facebook			: "facebook.svg",
+	graduation-cap		: "graduation-cap.svg",
+	instagram			: "instagram.svg",
+	linkedin			: "linkedin.svg",
+	menu				: "menu.svg",
+	twitter				: "twitter.svg"
 );
 
 //Icons Coloured 
@@ -153,5 +157,5 @@ $brkpoint-xl    : 1200px;
 $sidebar-height			: 135px;
 $sidebar-width			: 150px;
 $sidebar-width-lg		: 200px;
-$sidebar-width-marg		: 1.5;
+$sidebar-width-marg		: 1.1;
 $sidebar-width-head		: 2;

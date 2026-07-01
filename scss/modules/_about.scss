@@ -2,3 +2,17 @@
 // About me
 // ==========================================================================
 
+#about_me{
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        [class^="item"]{    
+            text-align: left;
+        }
+        span{
+            margin-right: 10px;
+        }
+    }
+
+}

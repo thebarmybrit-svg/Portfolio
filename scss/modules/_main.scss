@@ -5,10 +5,10 @@
 #main{
     width: 100%;
     @include mq(small){
-        padding-left: em($sidebar-width/1.5);
+        padding-left: nav-marg($sidebar-width, $sidebar-width-marg);
 
     }
     @include mq(large){
-        padding-left: em($sidebar-width-lg/1.5);
+        padding-left: nav-marg($sidebar-width-lg, $sidebar-width-marg);
     }
 }
