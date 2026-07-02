@@ -22,7 +22,7 @@ $base__font-size    : 16px;
 $font-size--title   : 64px; 
 $font-size--prim    : 36px;
 $font-size--secn    : 24px;
-$font-size--thrd    : 19px;
+$font-size--thrd    : 18px;
 $font-size--small   : 12px;
 $base__line         : 24px;
 $font-gap--title	: 55px;
@@ -145,6 +145,10 @@ $g-gutter-width     : 15px;
 $g-col-count        : 12;
 $g-col-count-lg     : 16;
 $g-cont-max-w       : 1200px;
+
+// Section Gap
+
+$section-gap		: 50px;
 
 
 // Breakpoints

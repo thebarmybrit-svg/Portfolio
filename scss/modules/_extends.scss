@@ -50,7 +50,6 @@
     font-size: em($font-size--title);
     line-height: em($font-gap--title, $font-size--title);
   }
-  
 }
 
 %font-prm {
@@ -67,10 +66,20 @@
   font-family: $font-family--secondary;
 }
 
-%font-trd {
+%font-thrd {
   letter-spacing: $letter-space;
   font-weight: $font-weight--light;
-  font-size: em($font-size--secn);
+  font-size: em($font-size--thrd);
   font-family: $font-family--secondary;
+}
+
+// Section Gaps
+
+%sec-gap{
+  border-bottom: 5px $colour-border solid;
+  padding-bottom: $section-gap;
+  &:first-child{
+    border-top: 5px $colour-border solid;
+  }
 }
 

@@ -4,7 +4,7 @@
 // ==========================================================================
 
 #contact-form-section{
-
+    @extend %sec-gap;
     .contact-information{
         align-self: flex-start;
         h2{

@@ -42,7 +42,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-    @extend %font-trd;
+    @extend %font-thrd;
     margin-bottom: 0;
 }
 
@@ -56,6 +56,7 @@ ul {
 a{
     color: $colour-links;
     text-decoration: none;
+    font-weight: $font-weight--bold;
     &:hover, &:focus{
         text-decoration: underline;
     }

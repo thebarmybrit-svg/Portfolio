@@ -3,6 +3,18 @@
 // ==========================================================================
 
 #projects-section{
-    
+    @extend %sec-gap;
+    .block{
+        h3{
+            margin-top: 0;
+            margin-bottom: $g-gutter-width;
+        }
+        .view-project{
+            display: inline-flex;
+            align-items: center; 
+            justify-content: center;
+            gap: $g-gutter-width;      
+        }
+    }
     
 }
