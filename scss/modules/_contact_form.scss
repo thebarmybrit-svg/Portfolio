@@ -5,6 +5,12 @@
 
 #contact-form-section{
 
+    .contact-information{
+        align-self: flex-start;
+        h2{
+            margin-top: 0;
+        }
+    }
 
     .contact-form {
         display: flex;

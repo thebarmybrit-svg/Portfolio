@@ -3,12 +3,12 @@
 // ==========================================================================
 
 #header{
-    // @extend %center-flex;
     position: relative;
     height: 100vh;
     width: 99vw;
     overflow: clip;
     .inner {
+        position: relative;
         .image-container{
             position: relative;
             left: 50%;
@@ -19,34 +19,35 @@
 
         .content{
             background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
             .grid{
-                align-items: center;
+                align-items: flex-start;
             }
         }
 
         .btn{
-            position: absolute; 
+            position: absolute;
             bottom: 20px; 
             left: 50%;
             margin-top: 20px; 
             transform: translateX(-50%);
-
-            color: $white;
+            
         }
-
-        @include mq(small){
-            // height: auto;
-            width: 99vw;
-            .content{
-                margin-left: nav-marg($sidebar-width, $sidebar-width-head);   
-            }   
+    }
+    @include mq(small){
+            padding-left: nav-marg($sidebar-width, $sidebar-width-marg);
+            .btn{
+                left: nav-marg($sidebar-width, $sidebar-width-marg);
+                transform: translateX(nav-marg-minus($sidebar-width, $sidebar-width-marg));
+            } 
         }
 
         @include mq(large){
-            .content{
-                margin-left: nav-marg($sidebar-width-lg, $sidebar-width-head);  
-            }   
+            padding-left: nav-marg($sidebar-width-lg, $sidebar-width-marg);
+             .btn{
+                left: nav-marg($sidebar-width, $sidebar-width-marg);
+                transform: translateX(nav-marg-minus($sidebar-width, $sidebar-width-marg));
+            } 
         }
-    }
 
 }

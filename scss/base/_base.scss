@@ -26,11 +26,23 @@ body {
 }
 
 h1, .h1 {
-    @extend %font-prim;
+    @extend %font-title;
+    margin-top: 0;
 }
 
 h2, .h2 {
-    @extend %font-sec;
+    @extend %font-prm;
+    
+}
+
+h3, .h3 {
+    @extend %font-secn;
+    margin-bottom: 0;
+}
+
+h4, .h4 {
+    @extend %font-trd;
+    margin-bottom: 0;
 }
 
 ul {

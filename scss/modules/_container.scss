@@ -31,24 +31,23 @@
     grid-template-columns: auto;
     margin: 0px auto;
     padding: 0px 15px 0 30px;
-    grid-gap: $g-gutter-width;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     align-items: center;
     width: 100%;
 
     @include mq(small){
-        max-width: $brkpoint-sm;
+        // width: $brkpoint-sm;
         grid-template-columns: repeat(auto-fit, minmax($g-col-width, 1fr));
     }
      @include mq(medium){
-        max-width: $brkpoint-md;
+        // width: $brkpoint-md;
     }
     @include mq(large){
-        max-width: $brkpoint-lg;
+        // width: $brkpoint-lg;
     }
     @include mq(extra-large){
-        max-width: $brkpoint-xl;
+        // width: $brkpoint-xl;
     }
 }
 

@@ -36,17 +36,29 @@
   font-family: $font-family--primary;
   font-size: em($base__font-size);
   line-height: ($base__line/$base__font-size);
-
 }
 
-%font-prim {
+%font-title {
   font-weight: $font-weight--bold;
-  font-size: em($font-size--prim);
-  line-height: em(46px, $font-size--prim);
-  margin-top: 0;
+  font-size: em($font-size--title);
+  line-height: em(46px, $font-size--title);
 }
 
-%font-sec {
+%font-prm {
+  letter-spacing: $letter-space;
+  font-weight: $font-weight--light;
+  font-size: em($font-size--prim);
+  font-family: $font-family--secondary;
+}
+
+%font-secn {
+  letter-spacing: $letter-space;
+  font-weight: $font-weight--light;
+  font-size: em($font-size--secn);
+  font-family: $font-family--secondary;
+}
+
+%font-trd {
   letter-spacing: $letter-space;
   font-weight: $font-weight--light;
   font-size: em($font-size--secn);

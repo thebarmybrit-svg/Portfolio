@@ -32,3 +32,7 @@
 @function nav-marg($sidebar-width, $size-alteration){
   @return ($sidebar-width/$size-alteration);
 }
+
+@function nav-marg-minus($sidebar-width, $size-alteration){
+  @return (-1 * ($sidebar-width/$size-alteration));
+}
