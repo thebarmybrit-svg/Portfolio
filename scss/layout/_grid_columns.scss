@@ -39,6 +39,7 @@
     min-width: 0; 
     flex-grow: 1;
     flex-shrink: 1;
+    padding: 25px 0;
     @include mq(small)  {
         margin-top: em(12px);
         margin-bottom: em(12px);
