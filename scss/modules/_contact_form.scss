@@ -21,6 +21,7 @@
         textarea {
             flex: 1 1 calc(50% - 15px);
             padding: 10px;
+            border-radius: $br--default;
         }
 
         .contact-firstname,
