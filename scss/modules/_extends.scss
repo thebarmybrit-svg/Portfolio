@@ -40,8 +40,17 @@
 
 %font-title {
   font-weight: $font-weight--bold;
-  font-size: em($font-size--title);
-  line-height: em(46px, $font-size--title);
+  font-size: em($font-size--prim);
+  line-height: em($font-gap--prim, $font-size--prim);
+}
+
+%font-title-desktop {
+  @include mq(small){
+    font-weight: $font-weight--bold;
+    font-size: em($font-size--title);
+    line-height: em($font-gap--title, $font-size--title);
+  }
+  
 }
 
 %font-prm {
