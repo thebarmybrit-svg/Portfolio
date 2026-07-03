@@ -3,8 +3,6 @@
 // ==========================================================================
 
 footer{
-    // @extend %center-flex;
-    // @extend .centered;
     padding: em(30px) 0 0;
     position: relative;
     @include mq(small){

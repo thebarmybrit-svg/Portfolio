@@ -19,9 +19,14 @@
         position: relative;
 
         textarea {
+            background-color: $grey;
+            color: $colour-form-font;
             flex: 1 1 calc(50% - 15px);
             padding: 10px;
             border-radius: $br--default;
+            &::placeholder{
+                color: lighten($colour-form-font, 20%);
+            }
         }
 
         .contact-firstname,

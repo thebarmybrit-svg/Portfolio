@@ -18,24 +18,22 @@
   .sidebar-container{
     display: grid;
     grid-template-columns: auto;
-    // margin: 0px auto;
     grid-gap: $g-gutter-width;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     align-items: center;
     height: 100%;
-    // padding: 10px 10px 0;
     &:not(:first-child){
       padding: 10px 10px 0;
     }
   }
   
-  .grid {
-    height: 100%;
+  .grid { 
     flex-direction: column; 
     padding: 0;
     justify-content: flex-start;
-    align-items: flex-start;     
+    align-items: flex-start;
+    height: 100%;     
   }
 
   .initials {

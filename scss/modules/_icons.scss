@@ -4,7 +4,7 @@
 
 .icon{
     @include icons($icon-locations, em($icon-size__standard), em($icon-size__standard));
-    @include icons-coloured($icons-coloured, em($icon-size__standard), em($icon-size__standard));
+    @include icons-coloured($icons-mono-coloured, em($icon-size__standard), em($icon-size__standard));
     @include icons-whiten($icon-locations, em($icon-size__standard), em($icon-size__standard));
     margin-top: 10px;
 }

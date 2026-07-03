@@ -41,7 +41,8 @@ $dark-coal		: #2D3F42;
 $icy-blue		: #A9C2C7;
 $cinereous		: #9e7f7a;
 $amathyst-dusk	: #3e1742;
-$mint-green		: #4fc279;
+$dark-sage		: #4A5D4E;
+$dark-forest	: #254135;
 $muted-cream	: #F5F5F0;
 $muted-teal		: #E0F2F1;
 
@@ -51,9 +52,12 @@ $muted-teal		: #E0F2F1;
 $colour-primary     : $blue-bayoux;
 $colour-secondary   : $steel-slate;
 $colour-font        : $muted-cream;
+$colour-form-font	: $dark-coal;
 $colour-links		: $muted-teal;
+$colour-submit		: $dark-forest;
+$colour-navgation	: $dark-sage;
 $colour-inverse     : $cinereous;
-$colour-border		: $dark-coal;
+$colour-border		: $icy-blue;
 $colour-shadow      : rgba($black, .2);
 
 // Color Palette Modifiers
@@ -80,8 +84,9 @@ $ui-colours: (
 	primary				: $colour-primary,
 	secondary			: $colour-secondary,
 	primary-inverse		: $colour-inverse,
-	nav					: $mint-green,
-	toggle				: $colour-secondary
+	nav					: $colour-navgation,
+	toggle				: $colour-secondary,
+	submit				: $colour-submit
 );
 
 // Icon locations
@@ -98,18 +103,18 @@ $icon-locations: (
 	instagram			: "instagram.svg",
 	linkedin			: "linkedin.svg",
 	menu				: "menu.svg",
+	pencil				: "pencil.svg",
 	phone_in_talk		: "phone_in_talk.svg",
 	twitter				: "twitter.svg",
 	weights				: "weights.svg"
 );
 
 //Icons Coloured 
-$icons-coloured: (
+$icons-mono-coloured: (
 
 );
 
 // Icon Themes
-
 $icon-themes: (
 
 );
