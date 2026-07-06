@@ -8,7 +8,6 @@
 
 body {
     @extend %font-base;
-    // @extend .centered;
     background-color: $colour-primary;
     color: $colour-font;
     margin: 0;
@@ -18,7 +17,6 @@ body {
     display: grid;
     transition: grid-template-columns 0.3s ease;
     position: relative;
-    // overflow-x: clip !important;
     width: 100%;
     max-width: 100%;
     height: 100vh;
