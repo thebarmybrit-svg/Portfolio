@@ -31,12 +31,10 @@
             left: 50%;
             margin-top: 20px; 
             transform: translateX(-50%);
-            
         }
 
         .typewriter{
             color: $amathyst-dawn;
-
         }
     }
     @include mq(small){
