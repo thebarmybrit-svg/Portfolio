@@ -33,6 +33,11 @@
             transform: translateX(-50%);
             
         }
+
+        .typewriter{
+            color: $amathyst-dawn;
+
+        }
     }
     @include mq(small){
             padding-left: nav-marg($sidebar-width, $sidebar-width-marg);
