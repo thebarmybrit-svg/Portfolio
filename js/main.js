@@ -1,5 +1,5 @@
 // Body
-$('body').hide().fadeIn(400);
+// $('body').hide().fadeIn(400);
 
 // Navigation bar
 // Mobile view
@@ -7,11 +7,15 @@ $('.btn--toggle').on('click', function(){
     $('#sidebar-section').toggleClass('is-open');
 });
 
-$(window).on('resize', function() {
-    if (window.innerWidth >= 576) {
-        $('#sidebar-section').removeClass('is-open');
-    }
-});
+if (window.matchMedia('(min-width: 576px)').matches) {
+    $('#sidebar-section').removeClass('is-open');
+}
+
+// $(window).on('resize', function() {
+//     if (window.innerWidth >= 576) {
+//         $('#sidebar-section').removeClass('is-open');
+//     }
+// });
 
 // Page Scrolling
  $('a[href^="#"]').on('click', function(e) {
@@ -34,27 +38,52 @@ $(window).on('resize', function() {
 
     $('html, body').animate({
         scrollTop: scrollTopPosition
-    }, 800); 
+    }, 500); 
 });
 
 // Page Transisions
-$('.navigation a:not([href^="#"])').on('click', function(e) {
-    e.preventDefault();
-    var targetUrl = $(this).attr('href');
-    
-    $('body').fadeOut(400, function() {
-        window.location.href = targetUrl;
-    });
+
+$(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link'
 });
+// $('.navigation a:not([href^="#"])').on('click', function(e) {
+//     e.preventDefault();
+//     var targetUrl = $(this).attr('href');
+    
+//     $('body').fadeOut(400, function() {
+//         window.location.href = targetUrl;
+//     });
+// });
 
 // Header
 // Typing cycle
-const typed = new Typed(".typewriter", {
-    strings: ["Designer", "Developer", "Wizard"],
-    typeSpeed: 150,
-    backSpeed: 50,
-    typeDelay: 1500,
-    loop: true
+const typed = 
+
+$(".typewriter").each(function() {
+    new Typed(this, {
+        strings: ["Designer", "Developer", "Wizard"],
+        typeSpeed: 150,
+        backSpeed: 50,
+        typeDelay: 1500,
+        loop: true
+    });
+});
+
+$(".typewriter-static").each(function() {
+    const $element = $(this);
+    const textToType = $element.text();
+    $element.text("");
+
+    new Typed(this, {
+        strings: ["", textToType],
+        showCursor: false,
+        backSpeed: 0,
+        typeSpeed: 100 
+    });
 });
 
 // Contact Form

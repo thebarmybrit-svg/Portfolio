@@ -3,8 +3,9 @@
     <head>
         <title>Alexander&apos;s Portfolio</title>
         <meta http-equiv="X-UA-Compatable" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
+        <link rel="stylesheet" href="js/animsition/animsition.min.css">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
@@ -23,7 +24,7 @@
                         <div class="header-container">
                             <div class="container">
                                 <div class="grid">
-                                    <h1 class="hidden-sm hidden-md hidden-lg hidden-xl">Alexander Brown's Portfolio</h1>
+                                    <h1 class="hidden-sm hidden-md hidden-lg hidden-xl typewriter-static">Alexander Brown's Portfolio</h1>
                                     <h1 class="hidden-mobile">My Name is Alexander Brown</h1>
                                     <h2 class="hidden-mobile">I am a Web <span class="typewriter"></span>, and welcome to my portfolio.</h2>
                                     <a class="btn btn--nav" href="#projects-section">
@@ -46,32 +47,32 @@
                     </div>
                     <ul class="navigation">
                         <li class="naviagion-item">
-                            <a href="About_Me">About Me</a>
+                            <a href="About_Me" class="animsition-link">About Me</a>
                         </li>
                         <li class="naviagion-item">
-                            <a href="#projects-section">Projects</a>
+                            <a href="#projects-section" class="animsition-link">Projects</a>
                         </li>
                         <li class="naviagion-item">
-                            <a href="Coding_Examples/">Coding Examples</a>
+                            <a href="Coding_Examples/" class="animsition-link">Coding Examples</a>
                         </li>
                         <li class="naviagion-item">
-                            <a href="SCS_Scheme">SCS Scheme</a>
+                            <a href="SCS_Scheme" class="animsition-link">SCS Scheme</a>
                         </li>
                         <li class="naviagion-item">
-                            <a href="#contact-form-section">Contact Me</a>
+                            <a href="#contact-form-section" class="animsition-link">Contact Me</a>
                         </li>
                     </ul>
                     <div class="sidebar-social-logos">
-                        <a class="facebook" href="#" target="_blank" rel="noopener">
-                            <span class="icon-facebook--whiten"></span>
+                        <a class="github animsition-link" href="https://github.com/thebarmybrit-svg" target="_blank" rel="noopener">
+                            <span class="icon-github--whiten"></span>
                         </a>
-                        <a class="linkedin" href="#" target="_blank" rel="noopener">
+                        <a class="linkedin animsition-link" href="#" target="_blank" rel="noopener">
                             <span class="icon-linkedin--whiten"></span>
                         </a>
-                        <a class="twitter" href="#" target="_blank" rel="noopener">
+                        <a class="twitter animsition-link" href="#" target="_blank" rel="noopener">
                             <span class="icon-twitter--whiten"></span>
                         </a>
-                        <a class="instergram" href="#" target="_blank" rel="noopener">
+                        <a class="instergram animsition-link" href="#" target="_blank" rel="noopener">
                             <span class="icon-instagram--whiten"></span>
                         </a>
                     </div>
@@ -131,22 +132,22 @@
                     <div class="grid">
                         <div class="grid__col-sm--12 grid__col-lg--5 contact-information">
                             <h2>Get in Touch</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>If you wish to contatc me, please use the contact methods below</p>
                             <h4>
                                 <span class="icon icon-phone_in_talk"></span>
                                 00000000000
                             </h4>
                             <h4>
                                 <span class="icon icon-envelop" aria-hidden="true"></span>
-                                email@email.com
+                                alexander.brown@netmatters-scs.com
                             </h3>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Or you can use the form on the right to send me a direct message. I will respond at the earliest convience</p>
                         </div>
                         <form class="grid__col-sm--12  grid__col-lg--8 contact-form" method="get" action="#" accept-charset="UTF8">
-                            <textarea class="contact-firstname required-field" placeholder="First Name*"></textarea>
-                            <textarea class="contact-surname required-field" placeholder="Surname*"></textarea>
-                            <textarea class="contact-email required-field" placeholder="Email Address*"></textarea>
-                            <textarea class="contact-subject" placeholder="Subject"></textarea>
+                            <input type="text" name="fname" autocomplete="given-name" class="contact-firstname required-field" placeholder="First Name*">
+                            <input type="text" name="lname" autocomplete="family-name" class="contact-surname required-field" placeholder="Surname*">
+                            <input type="email" name="email" autocomplete="email" class="contact-email required-field" placeholder="Email Address*">
+                            <input type="text" class="contact-subject" placeholder="Subject">
                             <textarea class="contact-message" placeholder="Message"></textarea>
                             <button class="btn btn--submit contact-submit" type="submit" disabled>
                                 Send Email
@@ -170,6 +171,7 @@
         </footer>
         <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+        <script src="js/animsition/jquery.animsition.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
