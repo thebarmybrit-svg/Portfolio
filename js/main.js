@@ -41,17 +41,6 @@ if (window.matchMedia('(min-width: 576px)').matches) {
     }, 500); 
 });
 
-// Page Transisions
-
-// $('.navigation a:not([href^="#"])').on('click', function(e) {
-//     e.preventDefault();
-//     var targetUrl = $(this).attr('href');
-    
-//     $('body').fadeOut(400, function() {
-//         window.location.href = targetUrl;
-//     });
-// });
-
 // Header
 // Typing cycle
 $(".typewriter").each(function() {
@@ -76,6 +65,15 @@ $(".typewriter-static").each(function() {
         typeSpeed: 100 
     });
 });
+
+// Projects Carosel
+// $('.projects-grid').slick({
+//     dots: true,
+//     arrows: false,
+//     slidesToShow: 3,
+//     slidesToScroll: 3,
+//     rows: 0
+// });
 
 // Contact Form
 const $requiredFields = $('.required-field');

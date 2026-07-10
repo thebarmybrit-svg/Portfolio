@@ -3,6 +3,9 @@
 // ==========================================================================
 
 #projects-section{
+    h2{
+        padding-left: 20px;
+    }
     @extend %sec-gap;
     .block{
         h3{
@@ -14,6 +17,17 @@
             align-items: center; 
             justify-content: center;
             gap: $g-gutter-width;      
+        }
+    }
+
+    @include mq(small){
+        h2{
+            padding-left: $sidebar-width/$sidebar-width-marg;
+        }
+    }
+    @include mq(large) {
+        h2{
+            padding-left: $sidebar-width-lg/$sidebar-width-marg;
         }
     }
     
