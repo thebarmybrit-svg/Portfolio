@@ -43,13 +43,6 @@ if (window.matchMedia('(min-width: 576px)').matches) {
 
 // Page Transisions
 
-$(".animsition").animsition({
-    inClass: 'fade-in',
-    outClass: 'fade-out',
-    inDuration: 1500,
-    outDuration: 800,
-    linkElement: '.animsition-link'
-});
 // $('.navigation a:not([href^="#"])').on('click', function(e) {
 //     e.preventDefault();
 //     var targetUrl = $(this).attr('href');
@@ -61,8 +54,6 @@ $(".animsition").animsition({
 
 // Header
 // Typing cycle
-const typed = 
-
 $(".typewriter").each(function() {
     new Typed(this, {
         strings: ["Designer", "Developer", "Wizard"],
