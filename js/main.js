@@ -14,7 +14,7 @@ $(window).on('resize', function() {
 });
 
 // Page Scrolling
- $('.navigation a[href^="#"]').on('click', function(e) {
+ $('a[href^="#"]').on('click', function(e) {
     var targetId = $(this).attr('href');
     var $targetElement = $(targetId);
     var scrollTopPosition;
@@ -80,6 +80,7 @@ $requiredFields.on('input', function() {
     }
 
 });
+
 // Check Email Regex
 $('.contact-form').on('submit', function(e) {
     const emailValue = $('.contact-email').val().trim();

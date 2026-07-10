@@ -9,13 +9,11 @@
   left: 0;
   bottom: 0;
   height: 100vh;
-  width: 0;
   background-color: $colour-secondary;
   border-right: 5px $colour-border solid;
   z-index: 1000; 
   overflow-x: hidden;
   transition: width $trns-duration ease-out, opacity $trns-duration ease-out;
-  opacity: 0;
 
   .sidebar-container{
     display: grid;
@@ -84,9 +82,14 @@
     gap: 5px;
   }
 
-  &.is-open{
-    width: $sidebar-width-mobile;
-    opacity: 1;
+  @include mq(up-to-small){
+    width: 0;
+    opacity: 0;
+
+    &.is-open {
+      width: $sidebar-width-mobile;
+      opacity: 1;
+    }
   }
 
   @include mq(small){

@@ -35,7 +35,7 @@
     }
   }
   @else if $break == "up-to-small" {
-    @media (min-width: 1px) and (max-width: ($brkpoint-sm - 1)){
+    @media (max-width: ($brkpoint-sm - 1)){
       @content;
     }
   }
