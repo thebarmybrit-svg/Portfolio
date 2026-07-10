@@ -4,10 +4,9 @@
 
 .grid {
     @extend %center-flex;
-    flex-wrap: wrap;
-    flex-direction: column;  
-
     @extend %clearfix;
+    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     max-width: 100%;
 

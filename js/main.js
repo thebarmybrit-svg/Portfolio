@@ -67,13 +67,28 @@ $(".typewriter-static").each(function() {
 });
 
 // Projects Carosel
-// $('.projects-grid').slick({
-//     dots: true,
-//     arrows: false,
-//     slidesToShow: 3,
-//     slidesToScroll: 3,
-//     rows: 0
-// });
+$('.projects-grid').slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+});
 
 // Contact Form
 const $requiredFields = $('.required-field');

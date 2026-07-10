@@ -7,6 +7,19 @@
         padding-left: 20px;
     }
     @extend %sec-gap;
+    .projects-grid{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 $g-gutter-width;
+        margin: 0 -15px;
+        .slick-slide {
+            margin: 0 15px;
+        }
+    } 
+        
+
     .block{
         h3{
             margin-top: 0;
@@ -23,6 +36,11 @@
     @include mq(small){
         h2{
             padding-left: $sidebar-width/$sidebar-width-marg;
+        }
+        .projects-grid{
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-direction: row;
         }
     }
     @include mq(large) {
