@@ -67,31 +67,45 @@ $(".typewriter-static").each(function() {
 });
 
 // Projects Carosel
-$('.projects-grid').slick({
-    dots: true,
-    arrows: false,
-    mobileFirst: true, 
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: true,
-    responsive: [
-        {
-            breakpoint: 576, 
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 768, 
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
+function initProjectSlider() {
+    var $slider = $('.projects-grid');
+    var windowWidth = $(window).width();
+
+    if (windowWidth < 576) {
+        if ($slider.hasClass('slick-initialized')) {
+            $slider.slick('unslick');
         }
-    ]
+        return;
+    }
+
+    // Determine slides based on explicit viewport conditions
+    var targetSlides = (windowWidth >= 992) ? 3 : 2;
+
+    if (!$slider.hasClass('slick-initialized')) {
+        // First-time load config
+        $slider.slick({
+            dots: true,
+            arrows: false,
+            slidesToShow: targetSlides,
+            slidesToScroll: targetSlides,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            adaptiveHeight: true
+        });
+    } else {
+        var currentOptions = $slider.slick('getSlick');
+        if (currentOptions.options.slidesToShow !== targetSlides) {
+            $slider.slick('slickSetOption', 'slidesToShow', targetSlides, false);
+            $slider.slick('slickSetOption', 'slidesToScroll', targetSlides, true);
+        }
+    }
+}
+
+// Bind cleanly to standard browser viewport actions
+$(window).on('load resize orientationchange', function() {
+    initProjectSlider();
 });
-$(window).trigger('resize');
+
 
 // Contact Form
 const $requiredFields = $('.required-field');

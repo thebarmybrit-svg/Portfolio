@@ -1862,9 +1862,6 @@ h4, .h4 {
 
 /* line 10, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
 #projects-section .projects-grid {
-  display: block !important;
-  flex-wrap: wrap;
-  flex-direction: column;
   width: 100%;
   max-width: 100%;
   min-width: 0;
@@ -1873,22 +1870,27 @@ h4, .h4 {
 }
 
 /* line 19, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+#projects-section .projects-grid:not(.slick-initialized) .projects-example {
+  margin-bottom: 30px;
+}
+
+/* line 23, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
 #projects-section .projects-grid .slick-slide {
   margin: 0 15px;
 }
 
-/* line 25, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+/* line 29, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
 #projects-section .block {
   min-width: 0;
 }
 
-/* line 27, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+/* line 31, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
 #projects-section .block h3 {
   margin-top: 0;
   margin-bottom: 15px;
 }
 
-/* line 31, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+/* line 35, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
 #projects-section .block .view-project {
   display: inline-flex;
   align-items: center;
@@ -1896,13 +1898,57 @@ h4, .h4 {
   gap: 15px;
 }
 
+/* line 43, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+#projects-section .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  gap: 10px;
+}
+
+/* line 51, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+#projects-section .slick-dots li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 56, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+#projects-section .slick-dots li button {
+  display: block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 2px solid #f5f5f5;
+  border-radius: 50%;
+  background: transparent;
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* line 69, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+#projects-section .slick-dots li button:hover {
+  background-color: #0b0b0b;
+}
+
+/* line 76, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+#projects-section .slick-dots li.slick-active button {
+  background-color: #f5f5f5;
+  border-color: #f5f5f5;
+}
+
 @media (min-width: 576px) {
-  /* line 40, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+  /* line 85, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
   #projects-section h2 {
     padding-left: 136.36364px;
   }
-  /* line 43, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+  /* line 88, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
   #projects-section .projects-grid {
+    display: block;
     flex-grow: 0;
     flex-shrink: 1;
     flex-direction: row;
@@ -1910,7 +1956,7 @@ h4, .h4 {
 }
 
 @media (min-width: 992px) {
-  /* line 50, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
+  /* line 96, ../NetMatters Projects/Portfolio/scss/modules/_projects.scss */
   #projects-section h2 {
     padding-left: 181.81818px;
   }
