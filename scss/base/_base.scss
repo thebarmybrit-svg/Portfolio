@@ -8,14 +8,14 @@
 
 body {
     @extend %font-base;
-    background-color: $colour-primary;
-    color: $colour-font;
+    background-color: var(--bg-colour);
+    color: var(--text-colour);
     margin: 0;
     top: 0;
     left: 0;
 
     display: grid;
-    transition: grid-template-columns 0.3s ease;
+    transition: grid-template-columns $trns-duration ease, background-color $trns-duration ease, color $trns-duration ease;
     position: relative;
     width: 100%;
     max-width: 100%;
@@ -52,7 +52,7 @@ ul {
 }
 
 a{
-    color: $colour-links;
+    color: var(--link-colour);
     text-decoration: none;
     font-weight: $font-weight--bold;
     &:hover, &:focus{

@@ -38,6 +38,7 @@ $grey  : #e5e5e5;
 $blue-bayoux	: #618085;
 $steel-slate	: #405c6b;
 $dark-coal		: #2D3F42;
+$void-grey		: #1d2c35;
 $icy-blue		: #A9C2C7;
 $cinereous		: #9e7f7a;
 $amathyst-dawn	: #cc24df;
@@ -46,21 +47,44 @@ $dark-forest	: #254135;
 $muted-cream	: #F5F5F0;
 $muted-teal		: #E0F2F1;
 $error-red		: #cf1111;
-
+$daybreak		: #e5ff4f;
+$nightfall		: #1b1b50;
 
 // Colour usage
 
-$colour-primary     : $blue-bayoux;
-$colour-secondary   : $steel-slate;
-$colour-font        : $muted-cream;
-$colour-form-font	: $dark-coal;
-$colour-links		: $muted-teal;
-$colour-submit		: $dark-forest;
-$colour-navgation	: $dark-sage;
-$colour-inverse     : $cinereous;
-$colour-border		: $icy-blue;
-$colour-shadow      : rgba($black, .2);
+$colour-primary     	: $blue-bayoux;
+$colour-primary-dark	: $dark-coal;
+$colour-secondary   	: $steel-slate;
+$colour-secondary-dark	: $void-grey;
+$colour-font        	: $muted-cream;
+$colour-form-font		: $dark-coal;
+$colour-links			: $muted-teal;
+$colour-submit			: $dark-forest;
+$colour-navgation		: $dark-sage;
+$colour-inverse     	: $cinereous;
+$colour-border			: $icy-blue;
+$colour-shadow      	: rgba($black, .2);
 
+// Dark and Light mode colours
+:root {
+  --bg-colour           : #{$colour-primary};
+  --bg-second-colour    : #{$colour-secondary};
+  --form-colour         : #{$grey};
+  --text-colour         : #{$colour-font};
+  --text-form-colour    : #{$colour-form-font};
+  --link-colour         : #{$colour-links};
+  --border-colour       : #{$colour-border};
+}
+
+[data-theme="dark"] {
+  --bg-colour           : #{$colour-primary-dark};
+  --bg-second-colour    : #{$colour-secondary-dark};
+  --form-colour         : #{$grey};
+  --text-colour         : #{$white};
+  --text-form-colour    : #{$colour-form-font};
+  --link-colour         : #{$white};
+  --border-colour       : #{$colour-border};
+}
 // Color Palette Modifiers
 
 $color-palettes: (
@@ -79,8 +103,7 @@ $color-palettes: (
 	)
 );
 
-// UI Colors
-
+// UI Colours
 $ui-colours: (
 	primary				: $colour-primary,
 	secondary			: $colour-secondary,
@@ -90,8 +113,16 @@ $ui-colours: (
 	submit				: $colour-submit
 );
 
-// Icon locations
+$ui-colours-lnd: (
+	primary				: (light: $colour-primary, dark: $colour-primary),
+	secondary			: (light: $colour-secondary, dark: $colour-secondary),
+	primary-inverse		: (light: $colour-inverse, dark: $colour-inverse),
+	nav					: (light: $colour-navgation, dark: $colour-navgation),
+	toggle				: (light: $colour-secondary, dark: $colour-secondary),
+	submit				: (light: $colour-submit, dark: $colour-submit)
+);
 
+// Icon locations
 $icon-locations: (
 	briefcase			: "briefcase.svg",
 	circle-down			: "circle-down.svg",
@@ -114,7 +145,8 @@ $icon-locations: (
 
 //Icons Coloured 
 $icons-mono-coloured: (
-
+	sun			: (location: "sun.svg", colour: $black),
+	moon-stroke	: (location: "moon-stroke.svg", colour: $white)
 );
 
 // Icon Themes
@@ -135,21 +167,17 @@ $img-size__standard--max-width-desktop: 400px;
 $img-gutter-width: 20px;
 
 // Border radius
-
 $br--default    : .4em;
 $br--round      : 50%;
 
 // Transitions
-
 $trns-duration  : .5s;
 
 // Path to Assets
-
 $path-img-icon--rel           : "../img/icons";
 $path-img-proj--rel           : "../img/proj-img";
 
 // Grid
-
 $g-col-width        : 120px;
 $g-gutter-width     : 15px;
 $g-col-count        : 12;
@@ -157,12 +185,10 @@ $g-col-count-lg     : 16;
 $g-cont-max-w       : 1200px;
 
 // Section Gap
-
 $section-gap		: 50px;
 
 
 // Breakpoints
-
 $brkpoint-xxs	: 1px;
 $brkpoint-xs    : 280px;
 $brkpoint-sm    : 576px;
@@ -171,7 +197,6 @@ $brkpoint-lg    : 992px;
 $brkpoint-xl    : 1200px;
 
 //Element dimentions
-
 $sidebar-height			: 135px;
 $sidebar-width-mobile	: 250px;
 $sidebar-width			: 150px;

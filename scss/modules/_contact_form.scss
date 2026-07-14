@@ -19,8 +19,8 @@
         position: relative;
 
         textarea {
-            background-color: $grey;
-            color: $colour-form-font;
+            background-color: var(--form-colour);
+            color: var(--text-form-colour);
             flex: 1 1 calc(50% - 15px);
             padding: 10px;
             border-radius: $br--default;
