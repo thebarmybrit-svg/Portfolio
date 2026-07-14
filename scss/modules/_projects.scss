@@ -8,10 +8,12 @@
     }
     @extend %sec-gap;
     .projects-grid{
+        display: block !important;
         flex-wrap: wrap;
         flex-direction: column;
         width: 100%;
         max-width: 100%;
+        min-width: 0;
         padding: 0 $g-gutter-width;
         margin: 0 -15px;
         .slick-slide {
@@ -21,6 +23,7 @@
         
 
     .block{
+         min-width: 0; 
         h3{
             margin-top: 0;
             margin-bottom: $g-gutter-width;

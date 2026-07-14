@@ -70,25 +70,28 @@ $(".typewriter-static").each(function() {
 $('.projects-grid').slick({
     dots: true,
     arrows: false,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    mobileFirst: true, 
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
     responsive: [
         {
-            breakpoint: 768,
+            breakpoint: 576, 
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2
             }
         },
         {
-            breakpoint: 576,
+            breakpoint: 768, 
             settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToShow: 3,
+                slidesToScroll: 3
             }
         }
     ]
 });
+$(window).trigger('resize');
 
 // Contact Form
 const $requiredFields = $('.required-field');
