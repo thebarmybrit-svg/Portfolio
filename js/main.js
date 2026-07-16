@@ -34,7 +34,7 @@ themeToggle.addEventListener('click', () => {
 // Navigation bar
 // Mobile view
 function initSidebarState() {
-    if (window.matchMedia('(max-width: 576px)').matches) {
+    if (window.matchMedia('(max-width: 575.98px)').matches) {
         $('#sidebar-section').removeClass('is-open');
     }
 }
@@ -45,7 +45,7 @@ $('.btn--toggle').on('click', function(){
 
 // Change between Mobile view to Desktop view
 function checkSidebarResolution() {
-    if (window.matchMedia('(min-width: 576px)').matches) {
+    if (window.matchMedia('(min-width: 575.98px)').matches) {
         $('#sidebar-section').removeClass('is-open');
     }
 }
@@ -106,7 +106,7 @@ function initProjectSlider() {
     var $slider = $('.projects-grid');
     var windowWidth = $(window).width();
 
-    if (windowWidth < 576) {
+    if (windowWidth < 575.98) {
         if ($slider.hasClass('slick-initialized')) {
             $slider.slick('unslick');
         }
@@ -114,7 +114,7 @@ function initProjectSlider() {
     }
 
     // Determine slides based on explicit viewport conditions
-    var targetSlides = (windowWidth >= 992) ? 3 : 2;
+    var targetSlides = (windowWidth >= 991.98) ? 3 : 2;
 
     if (!$slider.hasClass('slick-initialized')) {
         // First-time load config
@@ -179,3 +179,6 @@ $('.contact-form').on('submit', function(e) {
     }
     $('.contact-email').css('border', '');
 });
+
+// Phone Regex
+// const phoneRegex = /^(\+\d{1,3}[- ]?)?\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$/;

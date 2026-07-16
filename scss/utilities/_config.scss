@@ -189,12 +189,13 @@ $section-gap		: 50px;
 
 
 // Breakpoints
-$brkpoint-xxs	: 1px;
-$brkpoint-xs    : 280px;
-$brkpoint-sm    : 576px;
-$brkpoint-md    : 768px;
-$brkpoint-lg    : 992px;
-$brkpoint-xl    : 1200px;
+$brkpoint-xxs		: 1px;
+$brkpoint-xs    	: 280px;
+$brkpoint-sm    	: 576px;
+$brkpoint-md    	: 768px;
+$brkpoint-lg    	: 992px;
+$brkpoint-xl    	: 1200px;
+$brkpoint-buffer	: 0.02px;
 
 //Element dimentions
 $sidebar-height			: 135px;

@@ -20,7 +20,7 @@
 
 @mixin mq($break) {
   @if $break == "micro" {
-    @media (min-width: 1px) and (max-width: ($brkpoint-xs - 1)){
+    @media (min-width: 1px) and (max-width: ($brkpoint-xs - $brkpoint-buffer)){
       @content;
     }
   }
@@ -30,12 +30,12 @@
     }
   }
   @else if $break == "mobile-only" {
-    @media (min-width: $brkpoint-xs) and (max-width: ($brkpoint-sm - 1)){
+    @media (min-width: $brkpoint-xs) and (max-width: ($brkpoint-sm - $brkpoint-buffer)){
       @content;
     }
   }
   @else if $break == "up-to-small" {
-    @media (max-width: ($brkpoint-sm - 1)){
+    @media (max-width: ($brkpoint-sm - $brkpoint-buffer)){
       @content;
     }
   }
@@ -45,7 +45,7 @@
     }
   }
    @else if $break == "small-only" {
-    @media (min-width: $brkpoint-sm) and (max-width: ($brkpoint-md - 1)){
+    @media (min-width: $brkpoint-sm) and (max-width: ($brkpoint-md - $brkpoint-buffer)){
       @content;
     }
   }
@@ -55,7 +55,7 @@
     }
   }
   @else if $break == "medium-only" {
-    @media (min-width: $brkpoint-md) and (max-width: ($brkpoint-lg - 1)){
+    @media (min-width: $brkpoint-md) and (max-width: ($brkpoint-lg - $brkpoint-buffer)){
       @content;
     }
   }
@@ -65,7 +65,7 @@
     }
   }
   @else if $break == "large-only" {
-    @media (min-width: $brkpoint-lg) and (max-width: ($brkpoint-xl - 1)){
+    @media (min-width: $brkpoint-lg) and (max-width: ($brkpoint-xl - $brkpoint-buffer)){
       @content;
     }
   }
@@ -147,15 +147,17 @@
 
 @mixin icons-coloured($map, $w, $h, $disp: inline-block) {
   @each $name, $props in $map {
-    $icon-url: '#{$path-img-icon--rel}/#{map-get($props, location)}';
+    $icon-url: url(#{$path-img-icon--rel}/#{map-get($props, location)});
     &-#{$name}--coloured {
-      -webkit-mask-image: url($icon-url);
+      -webkit-mask-image: $icon-url;
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-size: contain;
+      -webkit-mask-position: center;
 
-      mask-image: url($icon-url);
+      mask-image: $icon-url;
       mask-repeat: no-repeat;
       mask-size: contain;
+      mask-position: center;
 
       background-color: map-get($props, colour);
       width: $w;
@@ -167,15 +169,17 @@
 
 @mixin icons-whiten($map, $w, $h, $disp: inline-block) {
   @each $name, $img in $map {
-    $icon-url: '#{$path-img-icon--rel}/#{$img}';
+    $icon-url: url(#{$path-img-icon--rel}/#{$img});
     &-#{$name}--whiten {
-      -webkit-mask-image: url($icon-url);
+      -webkit-mask-image: $icon-url;
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-size: contain;
+      -webkit-mask-position: center;
 
-      mask-image: url($icon-url);
+      mask-image: $icon-url;
       mask-repeat: no-repeat;
       mask-size: contain;
+      mask-position: center;
 
       background-color: $colour-font;
       width: $w;
