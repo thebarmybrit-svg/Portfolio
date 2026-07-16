@@ -8,7 +8,7 @@
 %btn {
   padding: 15px 30px;
   border: 0;
-  border-radius : $br--default;
+  border-radius: $br--default;
   color: $white;
   text-transform: uppercase;
   font-size : em(14px);
@@ -76,10 +76,10 @@
 // Section Gaps
 
 %sec-gap{
-  border-bottom: 5px $colour-border solid;
+  border-bottom: 5px var(--border-colour) solid;
   padding-bottom: $section-gap;
   &:first-child{
-    border-top: 5px $colour-border solid;
+    border-top: 5px var(--border-colour) solid;
   }
 }
 

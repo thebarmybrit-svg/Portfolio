@@ -76,12 +76,26 @@ $('a[href^="#"]').on('click', function(e) {
     }, 500); 
 });
 
+$('.navigation-item a').on('click', function(event) {
+    var targetUrl = $(this).attr('href');
+
+    if (targetUrl && !targetUrl.startsWith('#')) {
+        event.preventDefault();
+
+        // Fade out the body opacity instead of display, preserving the canvas background
+        $('body').animate({ opacity: 0 }, 'slow', function() {
+            window.location.href = targetUrl;
+        });
+    }
+});
+$('body').animate({ opacity: 1 }, 'slow');
+
 // Header
 // Typing cycle
 $(".typewriter").each(function() {
     new Typed(this, {
         strings: ["Designer", "Developer", "Wizard"],
-        typeSpeed: 150,
+        typeSpeed: 100,
         backSpeed: 50,
         typeDelay: 1500,
         loop: true

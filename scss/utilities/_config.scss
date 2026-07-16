@@ -35,20 +35,24 @@ $white : #f5f5f5;
 $black : #0b0b0b;
 $grey  : #e5e5e5;
 
-$blue-bayoux	: #618085;
-$steel-slate	: #405c6b;
-$dark-coal		: #2D3F42;
-$void-grey		: #1d2c35;
-$icy-blue		: #A9C2C7;
-$cinereous		: #9e7f7a;
-$amathyst-dawn	: #cc24df;
-$dark-sage		: #4A5D4E;
-$dark-forest	: #254135;
-$muted-cream	: #F5F5F0;
-$muted-teal		: #E0F2F1;
-$error-red		: #cf1111;
-$daybreak		: #e5ff4f;
-$nightfall		: #1b1b50;
+$blue-bayoux		: #618085;
+$steel-slate		: #405c6b;
+$dark-coal			: #2D3F42;
+$midnight-coal		: #202d30;
+$void-grey			: #1d2c35;
+$icy-blue			: #A9C2C7;
+$cold-steel			: #7a8d91;
+$cinereous			: #9e7f7a;
+$amathyst-dawn		: #cc24df;
+$sage				: #3d6445;
+$forest				: #25664a;
+$dark-sage			: #4A5D4E;
+$dark-forest		: #254135;
+$muted-cream		: #F5F5F0;
+$muted-teal			: #E0F2F1;
+$error-red			: #cf1111;
+$daybreak			: #bacf42;
+$nightfall			: #1b1b50;
 
 // Colour usage
 
@@ -58,20 +62,25 @@ $colour-secondary   	: $steel-slate;
 $colour-secondary-dark	: $void-grey;
 $colour-font        	: $muted-cream;
 $colour-form-font		: $dark-coal;
+$colour-form-font-dark	: $midnight-coal;
 $colour-links			: $muted-teal;
-$colour-submit			: $dark-forest;
-$colour-navgation		: $dark-sage;
+$colour-submit			: $forest;
+$colour-navgation		: $sage;
+$colour-submit-dark		: $dark-forest;
+$colour-navgation-dark	: $dark-sage;
 $colour-inverse     	: $cinereous;
 $colour-border			: $icy-blue;
+$colour-border-dark		: $cold-steel;
 $colour-shadow      	: rgba($black, .2);
 
-// Dark and Light mode colours
+// Light and Dark mode colours
 :root {
   --bg-colour           : #{$colour-primary};
   --bg-second-colour    : #{$colour-secondary};
   --form-colour         : #{$grey};
   --text-colour         : #{$colour-font};
   --text-form-colour    : #{$colour-form-font};
+  --text-confirm-colour	: #{$colour-font};
   --link-colour         : #{$colour-links};
   --border-colour       : #{$colour-border};
 }
@@ -79,15 +88,16 @@ $colour-shadow      	: rgba($black, .2);
 [data-theme="dark"] {
   --bg-colour           : #{$colour-primary-dark};
   --bg-second-colour    : #{$colour-secondary-dark};
-  --form-colour         : #{$grey};
+  --form-colour         : #{$colour-form-font-dark};
   --text-colour         : #{$white};
-  --text-form-colour    : #{$colour-form-font};
+  --text-form-colour    : #{$white};
+  --text-confirm-colour	: #{$white};
   --link-colour         : #{$white};
-  --border-colour       : #{$colour-border};
+  --border-colour       : #{$colour-border-dark};
 }
 // Color Palette Modifiers
 
-$color-palettes: (
+$colour-palettes: (
 	grey: (
 		xx-light : lighten($grey, 43%),
 		x-light  : lighten($grey, 35%),
@@ -104,22 +114,22 @@ $color-palettes: (
 );
 
 // UI Colours
-$ui-colours: (
-	primary				: $colour-primary,
-	secondary			: $colour-secondary,
-	primary-inverse		: $colour-inverse,
-	nav					: $colour-navgation,
-	toggle				: $colour-secondary,
-	submit				: $colour-submit
-);
+// $ui-colours: (
+// 	primary				: $colour-primary,
+// 	secondary			: $colour-secondary,
+// 	primary-inverse		: $colour-inverse,
+// 	nav					: $colour-navgation,
+// 	toggle				: $colour-secondary,
+// 	submit				: $colour-submit
+// );
 
-$ui-colours-lnd: (
-	primary				: (light: $colour-primary, dark: $colour-primary),
-	secondary			: (light: $colour-secondary, dark: $colour-secondary),
+$ui-colours-dark-mode: (
+	primary				: (light: $colour-primary, dark: $colour-primary-dark),
+	secondary			: (light: $colour-secondary, dark: $colour-secondary-dark),
 	primary-inverse		: (light: $colour-inverse, dark: $colour-inverse),
-	nav					: (light: $colour-navgation, dark: $colour-navgation),
+	nav					: (light: $colour-navgation, dark: $colour-navgation-dark),
 	toggle				: (light: $colour-secondary, dark: $colour-secondary),
-	submit				: (light: $colour-submit, dark: $colour-submit)
+	submit				: (light: $colour-submit, dark: $colour-submit-dark)
 );
 
 // Icon locations

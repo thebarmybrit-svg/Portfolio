@@ -14,7 +14,8 @@
     border: 2px solid var(--border-colour);
     border-radius: $br--default;
     
-    @include bg-colours($ui-colours);
+    // @include bg-colours($ui-colours);
+    @include bg-colours-darkmode($ui-colours-dark-mode);
 
     text-decoration: none;
     width: fit-content;
@@ -47,6 +48,8 @@
         transform: none;
         margin-top: 20px; 
     }
-
+    &--dark{
+        width: 100%;
+    }
 }
 

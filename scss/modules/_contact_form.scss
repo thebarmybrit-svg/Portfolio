@@ -18,7 +18,7 @@
         gap: $g-gutter-width;
         position: relative;
 
-        textarea {
+        textarea, input {
             background-color: var(--form-colour);
             color: var(--text-form-colour);
             flex: 1 1 calc(50% - 15px);
@@ -52,6 +52,11 @@
         flex: 0 0 auto;
         margin-right: auto;
         margin-top: 10px;
+        color: var(--text-confirm-colour);
+        transition: color $trns-duration ease;
+        &:disabled{
+            color: $black;
+        }
     }
     
 }

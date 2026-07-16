@@ -80,7 +80,7 @@
 }
 
      
-// Generate modifier color classes
+// Generate modifier colour classes
 
 @mixin bg-colours($map) {
 	@each $theme, $colour in $map {
@@ -90,6 +90,19 @@
 	}
 }
 
+@mixin bg-colours-darkmode($map) {
+	@each $theme, $modes in $map {
+		&--#{$theme} {
+			// Fallback / Light mode background
+			background-color: map-get($modes, light);    
+      
+			// Dark mode background override
+			[data-theme="dark"] & {
+				background-color: map-get($modes, dark);
+			}
+		}
+  }
+}
 
 @mixin bg-colours-darken($map) {
 	@each $theme, $colour in $map {
