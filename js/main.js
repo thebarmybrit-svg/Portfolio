@@ -150,6 +150,8 @@ function initProjectSlider() {
     }
 }
 
+// Code Example Carosel
+
 // Bind cleanly to standard browser viewport actions
 $(window).on('load resize orientationchange', function() {
     initProjectSlider();

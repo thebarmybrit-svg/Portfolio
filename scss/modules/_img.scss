@@ -3,14 +3,22 @@
 // ==========================================================================
 
 .img {
-    
     @include m(project) {
         width: 100%;
-        height: auto;
+        height: 30vh;
         border: 1px solid palette(grey, x-light);
         border-radius: $br--default;
         object-fit: cover;
-        object-position: center; 
+        object-position: center;
+        @include mq(small){
+            height: 15vh;
+        }
+        @include mq(medium){
+            height: 25vh;
+        }
+        @include mq (large){
+            height: 30vh;
+        }
     }
     @include m(avatar) {
         border-radius: $br--round;

@@ -32,11 +32,19 @@
             margin-top: 0;
             margin-bottom: $g-gutter-width;
         }
-        .view-project{
+        .project-desc{
             display: inline-flex;
+            flex-direction: column;
             align-items: center; 
             justify-content: center;
-            gap: $g-gutter-width;      
+            gap: $g-gutter-width;  
+
+            .project-footer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+            }    
         }
     }
 
