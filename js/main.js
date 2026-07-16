@@ -76,7 +76,7 @@ $('a[href^="#"]').on('click', function(e) {
     }, 500); 
 });
 
-$('.navigation-item a').on('click', function(event) {
+$('.navigation-item a, .initials a').on('click', function(event) {
     var targetUrl = $(this).attr('href');
 
     if (targetUrl && !targetUrl.startsWith('#')) {

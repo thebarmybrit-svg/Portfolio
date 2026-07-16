@@ -43,6 +43,7 @@ $void-grey			: #1d2c35;
 $icy-blue			: #A9C2C7;
 $cold-steel			: #7a8d91;
 $cinereous			: #9e7f7a;
+$pale-silver		: #D2C0BD;
 $amathyst-dawn		: #cc24df;
 $sage				: #3d6445;
 $forest				: #25664a;
@@ -56,22 +57,23 @@ $nightfall			: #1b1b50;
 
 // Colour usage
 
-$colour-primary     	: $blue-bayoux;
-$colour-primary-dark	: $dark-coal;
-$colour-secondary   	: $steel-slate;
-$colour-secondary-dark	: $void-grey;
-$colour-font        	: $muted-cream;
-$colour-form-font		: $dark-coal;
-$colour-form-font-dark	: $midnight-coal;
-$colour-links			: $muted-teal;
-$colour-submit			: $forest;
-$colour-navgation		: $sage;
-$colour-submit-dark		: $dark-forest;
-$colour-navgation-dark	: $dark-sage;
-$colour-inverse     	: $cinereous;
-$colour-border			: $icy-blue;
-$colour-border-dark		: $cold-steel;
-$colour-shadow      	: rgba($black, .2);
+$colour-primary     			: $blue-bayoux;
+$colour-primary-dark			: $dark-coal;
+$colour-secondary   			: $steel-slate;
+$colour-secondary-dark			: $void-grey;
+$colour-font        			: $muted-cream;
+$colour-form-font				: $dark-coal;
+$colour-form-font-dark			: $midnight-coal;
+$colour-links					: $muted-teal;
+$colour-submit					: $forest;
+$colour-navgation				: $sage;
+$colour-submit-dark				: $dark-forest;
+$colour-navgation-dark			: $dark-sage;
+$colour-prime-inverse     		: $cinereous;
+$colour-prime-dark-inverse		: $pale-silver;
+$colour-border					: $icy-blue;
+$colour-border-dark				: $cold-steel;
+$colour-shadow      			: rgba($black, .2);
 
 // Light and Dark mode colours
 :root {
@@ -126,7 +128,7 @@ $colour-palettes: (
 $ui-colours-dark-mode: (
 	primary				: (light: $colour-primary, dark: $colour-primary-dark),
 	secondary			: (light: $colour-secondary, dark: $colour-secondary-dark),
-	primary-inverse		: (light: $colour-inverse, dark: $colour-inverse),
+	primary-inverse		: (light: $colour-prime-inverse, dark: $colour-prime-dark-inverse),
 	nav					: (light: $colour-navgation, dark: $colour-navgation-dark),
 	toggle				: (light: $colour-secondary, dark: $colour-secondary),
 	submit				: (light: $colour-submit, dark: $colour-submit-dark)

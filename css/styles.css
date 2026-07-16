@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-/* line 77, ../NetMatters Projects/Portfolio/scss/utilities/_config.scss */
+/* line 79, ../NetMatters Projects/Portfolio/scss/utilities/_config.scss */
 :root {
   --bg-colour: #618085;
   --bg-second-colour: #405c6b;
@@ -11,7 +11,7 @@
   --border-colour: #A9C2C7;
 }
 
-/* line 88, ../NetMatters Projects/Portfolio/scss/utilities/_config.scss */
+/* line 90, ../NetMatters Projects/Portfolio/scss/utilities/_config.scss */
 [data-theme="dark"] {
   --bg-colour: #2D3F42;
   --bg-second-colour: #1d2c35;
@@ -445,8 +445,12 @@ template {
 }
 
 /* line 9, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
-body {
+html, body {
   background-color: var(--bg-colour);
+}
+
+/* line 12, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
+body {
   color: var(--text-colour);
   margin: 0;
   top: 0;
@@ -458,41 +462,42 @@ body {
   max-width: 100%;
   height: 100vh;
   min-height: 100vh;
+  opacity: 0;
 }
 
-/* line 26, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
+/* line 30, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
 h1, .h1 {
   margin-top: 0;
 }
 
-/* line 37, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
+/* line 41, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
 h3, .h3 {
   margin-bottom: 0;
 }
 
-/* line 42, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
+/* line 46, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
 h4, .h4 {
   margin-bottom: 0;
 }
 
-/* line 47, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
+/* line 51, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
 ul {
   padding-left: 0;
 }
 
-/* line 49, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
+/* line 53, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
 ul li {
   list-style: none;
 }
 
-/* line 54, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
+/* line 58, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
 a {
   color: var(--link-colour);
   text-decoration: none;
   font-weight: 700;
 }
 
-/* line 58, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
+/* line 62, ../NetMatters Projects/Portfolio/scss/base/_base.scss */
 a:hover, a:focus {
   text-decoration: underline;
 }
@@ -1664,7 +1669,7 @@ h4, .h4 {
 
 /* line 100, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
 [data-theme="dark"] .btn--primary-inverse {
-  background-color: #9e7f7a;
+  background-color: #D2C0BD;
 }
 
 /* line 95, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
