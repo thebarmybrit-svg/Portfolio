@@ -15,6 +15,14 @@
   overflow-x: hidden;
   transition: width $trns-duration ease-out, opacity $trns-duration ease-out, background-color $trns-duration ease, color $trns-duration ease;
 
+  width: 0;
+  opacity: 0;
+
+  &.is-open {
+    width: $sidebar-width-mobile;
+    opacity: 1;
+  }
+
   .sidebar-container{
     display: grid;
     grid-template-columns: auto;
@@ -80,7 +88,7 @@
     width: 100%;
     align-self: center;
 
-    .naviagion-item {
+    .navigation-item {
       margin-bottom: 15px;
       text-align: center;    
       a {
@@ -97,26 +105,16 @@
     gap: 5px;
   }
 
-  @include mq(up-to-small){
-    width: 0 !important;
-    opacity: 0 !important;
-
-    &.is-open {
-      width: $sidebar-width-mobile !important;
-      opacity: 1 !important;
-    }
-  }
-
   @include mq(small){
-    width: $sidebar-width !important;
-    opacity: 1 !important;
+    width: $sidebar-width;
+    opacity: 1;
     .sidebar-container:first-child{
       padding-top: 0px;
     }
   }
 
   @include mq(large){
-    width: $sidebar-width-lg !important;
+    width: $sidebar-width-lg;
 
     .sidebar-container{
       padding-top: 20px 20px 0 0;

@@ -37,12 +37,19 @@ $('.btn--toggle').on('click', function(){
     $('#sidebar-section').toggleClass('is-open');
 });
 
-if (window.matchMedia('(min-width: 576px)').matches) {
-    $('#sidebar-section').removeClass('is-open');
+// Change between Mobile view to Desktop view
+function checkSidebarResolution() {
+    if (window.matchMedia('(min-width: 576px)').matches) {
+        $('#sidebar-section').removeClass('is-open');
+    }
 }
+checkSidebarResolution();
+window.matchMedia('(min-width: 576px)').addEventListener('change', function(e) {
+    checkSidebarResolution();
+});
 
 // Page Scrolling
- $('a[href^="#"]').on('click', function(e) {
+$('a[href^="#"]').on('click', function(e) {
     var targetId = $(this).attr('href');
     var $targetElement = $(targetId);
     var scrollTopPosition;
