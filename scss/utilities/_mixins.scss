@@ -20,7 +20,7 @@
 
 @mixin mq($break) {
   @if $break == "micro" {
-    @media (min-width: 1) and (max-width: ($brkpoint-xs - 1)){
+    @media (min-width: 1px) and (max-width: ($brkpoint-xs - 1)){
       @content;
     }
   }

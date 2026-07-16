@@ -33,6 +33,12 @@ themeToggle.addEventListener('click', () => {
 
 // Navigation bar
 // Mobile view
+function initSidebarState() {
+    if (window.matchMedia('(max-width: 576px)').matches) {
+        $('#sidebar-section').removeClass('is-open');
+    }
+}
+
 $('.btn--toggle').on('click', function(){
     $('#sidebar-section').toggleClass('is-open');
 });
@@ -43,10 +49,8 @@ function checkSidebarResolution() {
         $('#sidebar-section').removeClass('is-open');
     }
 }
-checkSidebarResolution();
-window.matchMedia('(min-width: 576px)').addEventListener('change', function(e) {
-    checkSidebarResolution();
-});
+$(window).on('resize', checkSidebarResolution);
+initSidebarState(); 
 
 // Page Scrolling
 $('a[href^="#"]').on('click', function(e) {

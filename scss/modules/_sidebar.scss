@@ -15,14 +15,6 @@
   overflow-x: hidden;
   transition: width $trns-duration ease-out, opacity $trns-duration ease-out, background-color $trns-duration ease, color $trns-duration ease;
 
-  width: 0;
-  opacity: 0;
-
-  &.is-open {
-    width: $sidebar-width-mobile;
-    opacity: 1;
-  }
-
   .sidebar-container{
     display: grid;
     grid-template-columns: auto;
@@ -83,7 +75,7 @@
     display: block;
     flex-direction: column;
     margin: 0;
-    padding-top: 10px auto;
+    padding-top: 10px;
     gap: 0;
     width: 100%;
     align-self: center;
@@ -103,6 +95,16 @@
     align-self: center;
     height: $icon-size__standard;
     gap: 5px;
+  }
+
+  @include mq(up-to-small){
+    width: 0;
+    opacity: 0;
+
+    &.is-open {
+      width: $sidebar-width-mobile;
+      opacity: 1;
+    }
   }
 
   @include mq(small){
