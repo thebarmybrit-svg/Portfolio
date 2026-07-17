@@ -20,6 +20,19 @@
             height: 30vh;
         }
     }
+    // @include m(example){
+    //     height: 50vh;
+    //     width: 100%;
+    //     object-fit: cover;
+    //     object-position:left;
+    //     border-radius: $br--default;
+    //     @include mq(small){
+    //         height: 100%;
+    //         width: 50vw;
+    //         object-fit: cover;
+    //         object-position: center;
+    //     }
+    // }
     @include m(avatar) {
         border-radius: $br--round;
         margin-left: auto;

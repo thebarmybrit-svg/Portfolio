@@ -1,0 +1,90 @@
+// ==========================================================================
+// Slick Handler
+// ==========================================================================
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &:before, &:after {
+        display: table;
+        content: '';
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+/* Forces the active initialized items into view */
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    gap: 10px;
+
+    li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+
+        button {
+            display: block;
+            width: 12px;
+            height: 12px;
+            padding: 0;
+            border: 2px solid $white;
+            border-radius: 50%; 
+            background: transparent;
+            text-indent: -9999px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all $trns-duration ease;
+
+            &:hover {
+                background-color: opacify($color: $black, $amount: 0.5);
+            }
+        }
+
+        // Target the active state dot container class
+        &.slick-active {
+            button {
+                background-color: $white;
+                border-color: $white;
+            }
+        }
+    }
+}

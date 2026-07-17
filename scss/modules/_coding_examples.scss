@@ -3,6 +3,47 @@
 // ==========================================================================
 
 #coding-examples{
-    @extend %sec-gap;
-    //UNDER CONSTUCTION
+
+    .coding-examples-grid{
+        background-color: var(--bg-second-colour);
+        transition: background-color $trns-duration ease;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 0 $g-gutter-width;
+        margin-top: 10px;
+        border: 2px solid $white;
+        align-content: center;
+        justify-content: center;
+
+        .coding-examples-slide{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            justify-content: center;
+            text-align: center;
+            h2 {
+                align-self: center; 
+                text-align: center;
+                width: 100%;
+            }
+
+            .code-container {
+                display: grid; 
+                max-width: 100%;
+                overflow-x: auto;  
+                overflow-y: hidden;
+            }
+
+            .code-raw {
+                font-size: clamp(0.5rem, calc(1vw + 0.5rem), 0.75rem); 
+                background-color: var(--bg-coding-colour);
+                color: var(--text-coding-colour);
+                display: block;
+                text-align: left;
+                padding: 0 $g-gutter-width;
+            }
+        }
+
+    }
 }

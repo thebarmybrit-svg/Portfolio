@@ -151,6 +151,13 @@ function initProjectSlider() {
 }
 
 // Code Example Carosel
+$('.coding-examples-grid').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: true,
+    arrows: false
+});
 
 // Bind cleanly to standard browser viewport actions
 $(window).on('load resize orientationchange', function() {

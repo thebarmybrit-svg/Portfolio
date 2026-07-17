@@ -48,47 +48,6 @@
         }
     }
 
-    .slick-dots {
-        display: flex !important;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-        margin: 20px 0 0 0;
-        gap: 10px;
-
-        li {
-            display: inline-block;
-            margin: 0;
-            padding: 0;
-
-            button {
-                display: block;
-                width: 12px;
-                height: 12px;
-                padding: 0;
-                border: 2px solid $white;
-                border-radius: 50%; 
-                background: transparent;
-                text-indent: -9999px;
-                overflow: hidden;
-                cursor: pointer;
-                transition: all $trns-duration ease;
-
-                &:hover {
-                    background-color: opacify($color: $black, $amount: 0.5);
-                }
-            }
-
-            // Target the active state dot container class
-            &.slick-active {
-                button {
-                    background-color: $white;
-                    border-color: $white;
-                }
-            }
-        }
-    }
-
     @include mq(small){
         h2{
             padding-left: $sidebar-width/$sidebar-width-marg;

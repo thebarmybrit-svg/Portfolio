@@ -49,11 +49,14 @@ $sage				: #3d6445;
 $forest				: #25664a;
 $dark-sage			: #4A5D4E;
 $dark-forest		: #254135;
+$vintage-green		: #00CC00;
 $muted-cream		: #F5F5F0;
 $muted-teal			: #E0F2F1;
 $error-red			: #cf1111;
 $daybreak			: #bacf42;
 $nightfall			: #1b1b50;
+$console-green		: #051105;
+$dev-black			: #0A0D11;
 
 // Colour usage
 
@@ -79,8 +82,10 @@ $colour-shadow      			: rgba($black, .2);
 :root {
   --bg-colour           : #{$colour-primary};
   --bg-second-colour    : #{$colour-secondary};
+  --bg-coding-colour	: #{$console-green};
   --form-colour         : #{$grey};
   --text-colour         : #{$colour-font};
+  --text-coding-colour	: #{$vintage-green};
   --text-form-colour    : #{$colour-form-font};
   --text-confirm-colour	: #{$colour-font};
   --link-colour         : #{$colour-links};
@@ -90,8 +95,10 @@ $colour-shadow      			: rgba($black, .2);
 [data-theme="dark"] {
   --bg-colour           : #{$colour-primary-dark};
   --bg-second-colour    : #{$colour-secondary-dark};
+  --bg-coding-colour	: #{$dev-black};
   --form-colour         : #{$colour-form-font-dark};
   --text-colour         : #{$white};
+  --text-coding-colour	: #{$white};
   --text-form-colour    : #{$white};
   --text-confirm-colour	: #{$white};
   --link-colour         : #{$white};
