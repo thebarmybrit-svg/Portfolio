@@ -87,6 +87,7 @@ $colour-shadow      			: rgba($black, .2);
   --text-colour         : #{$colour-font};
   --text-coding-colour	: #{$vintage-green};
   --text-form-colour    : #{$colour-form-font};
+  --text-form-disabled	: #{$colour-prime-dark-inverse};
   --text-confirm-colour	: #{$colour-font};
   --link-colour         : #{$colour-links};
   --border-colour       : #{$colour-border};
@@ -100,6 +101,7 @@ $colour-shadow      			: rgba($black, .2);
   --text-colour         : #{$white};
   --text-coding-colour	: #{$white};
   --text-form-colour    : #{$white};
+  --text-form-disabled	: #{$colour-prime-inverse};
   --text-confirm-colour	: #{$white};
   --link-colour         : #{$white};
   --border-colour       : #{$colour-border-dark};
@@ -169,9 +171,9 @@ $icons-mono-coloured: (
 );
 
 // Icon Themes
-$icon-themes: (
+// $icon-themes: (
 
-);
+// );
 
 // Image sizes
 

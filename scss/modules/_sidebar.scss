@@ -16,13 +16,8 @@
   transition: width $trns-duration ease-out, opacity $trns-duration ease-out, background-color $trns-duration ease, color $trns-duration ease;
 
   .sidebar-container{
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: $g-gutter-width;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-    align-items: center;
-    height: 100%;
+    height: 100%; 
+    padding: 10px;
     &:not(:first-child){
       padding: 10px 10px 0;
     }
@@ -32,10 +27,10 @@
   }
   
   .grid { 
-    flex-direction: column; 
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center; 
     padding: 0;
-    justify-content: flex-start;
-    align-items: flex-start;
     height: 100%;     
   }
 
@@ -59,6 +54,7 @@
     display: flex; 
     align-self: center;
     justify-content: center;
+    margin-top: 15px;   
     .icon{
       margin: 0;
       transition: background-image $trns-duration ease;
@@ -72,19 +68,20 @@
   }
 
   .navigation {
-    display: block;
-    flex-direction: column;
-    margin: 0;
-    padding-top: 10px;
-    gap: 0;
-    width: 100%;
-    align-self: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    flex-grow: 1;    
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
 
     .navigation-item {
       margin-bottom: 15px;
       text-align: center;    
       a {
         display: block;
+        padding: 8px 0;
       }
     }
   }
@@ -95,6 +92,8 @@
     align-self: center;
     height: $icon-size__standard;
     gap: 5px;
+    margin-top: auto;
+    padding-bottom: 15px;
   }
 
   @include mq(up-to-small){

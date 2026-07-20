@@ -8,12 +8,13 @@
   --text-colour: #F5F5F0;
   --text-coding-colour: #00CC00;
   --text-form-colour: #2D3F42;
+  --text-form-disabled: #D2C0BD;
   --text-confirm-colour: #F5F5F0;
   --link-colour: #E0F2F1;
   --border-colour: #A9C2C7;
 }
 
-/* line 95, ../NetMatters Projects/Portfolio/scss/utilities/_config.scss */
+/* line 96, ../NetMatters Projects/Portfolio/scss/utilities/_config.scss */
 [data-theme="dark"] {
   --bg-colour: #2D3F42;
   --bg-second-colour: #1d2c35;
@@ -22,6 +23,7 @@
   --text-colour: #f5f5f5;
   --text-coding-colour: #f5f5f5;
   --text-form-colour: #f5f5f5;
+  --text-form-disabled: #9e7f7a;
   --text-confirm-colour: #f5f5f5;
   --link-colour: #f5f5f5;
   --border-colour: #7a8d91;
@@ -1899,35 +1901,30 @@ h4, .h4 {
 
 /* line 18, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section .sidebar-container {
-  display: grid;
-  grid-template-columns: auto;
-  grid-gap: 15px;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  align-items: center;
   height: 100%;
+  padding: 10px;
 }
 
-/* line 26, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 21, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section .sidebar-container:not(:first-child) {
   padding: 10px 10px 0;
 }
 
-/* line 29, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 24, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section .sidebar-container:first-child {
   padding-top: 250px;
 }
 
-/* line 34, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 29, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section .grid {
   flex-direction: column;
-  padding: 0;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+  padding: 0;
   height: 100%;
 }
 
-/* line 42, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 37, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section .initials {
   width: 100%;
   max-width: 100vw;
@@ -1936,7 +1933,7 @@ h4, .h4 {
   text-align: center;
 }
 
-/* line 49, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 44, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section .initials .h1 {
   display: block;
   font-size: 2rem;
@@ -1945,57 +1942,61 @@ h4, .h4 {
   line-height: 1;
 }
 
-/* line 58, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 53, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section #theme-toggle {
   display: flex;
   align-self: center;
   justify-content: center;
+  margin-top: 15px;
 }
 
-/* line 62, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 58, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section #theme-toggle .icon {
   margin: 0;
   transition: background-image 0.5s ease;
 }
 
-/* line 66, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 62, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section #theme-toggle:has(.icon-sun--coloured) {
   background-color: #bacf42;
 }
 
-/* line 69, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 65, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section #theme-toggle:has(.icon-moon-stroke--coloured) {
   background-color: #1b1b50;
 }
 
-/* line 74, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 70, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section .navigation {
-  display: block;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
   margin: 0;
-  padding-top: 10px;
-  gap: 0;
+  padding: 0;
   width: 100%;
-  align-self: center;
 }
 
-/* line 83, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 79, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section .navigation .navigation-item {
   margin-bottom: 15px;
   text-align: center;
 }
 
-/* line 86, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 82, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section .navigation .navigation-item a {
   display: block;
+  padding: 8px 0;
 }
 
-/* line 93, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+/* line 90, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
 #sidebar-section .sidebar-social-logos {
   display: flex;
   align-self: center;
   height: 25px;
   gap: 5px;
+  margin-top: auto;
+  padding-bottom: 15px;
 }
 
 @media (max-width: 575.98px) {
@@ -2004,7 +2005,7 @@ h4, .h4 {
     width: 0;
     opacity: 0;
   }
-  /* line 104, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+  /* line 103, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
   #sidebar-section.is-open {
     width: 250px;
     opacity: 1;
@@ -2017,7 +2018,7 @@ h4, .h4 {
     width: 150px;
     opacity: 1;
   }
-  /* line 113, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+  /* line 112, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
   #sidebar-section .sidebar-container:first-child {
     padding-top: 0px;
   }
@@ -2028,11 +2029,11 @@ h4, .h4 {
   #sidebar-section {
     width: 200px;
   }
-  /* line 121, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+  /* line 120, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
   #sidebar-section .sidebar-container {
     padding-top: 20px 20px 0 0;
   }
-  /* line 124, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
+  /* line 123, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
   #sidebar-section .sidebar-social-logos {
     gap: 15px;
   }
@@ -2264,7 +2265,7 @@ h4, .h4 {
 
 /* line 57, ../NetMatters Projects/Portfolio/scss/modules/_contact_form.scss */
 #contact-form-section .contact-submit:disabled {
-  color: #0b0b0b;
+  color: var(--text-form-disabled);
 }
 
 /* line 7, ../NetMatters Projects/Portfolio/scss/modules/_about.scss */

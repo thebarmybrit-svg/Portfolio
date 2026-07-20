@@ -55,7 +55,7 @@
         color: var(--text-confirm-colour);
         transition: color $trns-duration ease;
         &:disabled{
-            color: $black;
+            color: var(--text-form-disabled);
         }
     }
     
