@@ -13,13 +13,13 @@ const isDark = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
 const setTheme = (toDark) => {
     if (toDark) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        toggleIcon.classList.add('icon-sun--coloured');
-        toggleIcon.classList.remove('icon-moon-stroke--coloured');
+        toggleIcon.classList.add('icon-sun');
+        toggleIcon.classList.remove('icon-moon-stroke');
         localStorage.setItem('portfolio-theme', 'dark');
     } else {
         document.documentElement.removeAttribute('data-theme');
-        toggleIcon.classList.add('icon-moon-stroke--coloured');
-        toggleIcon.classList.remove('icon-sun--coloured');
+        toggleIcon.classList.add('icon-moon-stroke');
+        toggleIcon.classList.remove('icon-sun');
         localStorage.setItem('portfolio-theme', 'light');
         
     }

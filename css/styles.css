@@ -70,6 +70,345 @@
   width: 1px;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?6jtkz9");
+  src: url("../fonts/icomoon.eot?6jtkz9#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?6jtkz9") format("truetype"), url("../fonts/icomoon.woff?6jtkz9") format("woff"), url("../fonts/icomoon.svg?6jtkz9#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* line 17, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 32, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-weights:before {
+  content: "\e901";
+}
+
+/* line 35, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-moon-stroke:before {
+  content: "\e902";
+}
+
+/* line 38, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-headphones:before {
+  content: "\e903";
+}
+
+/* line 41, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-transfer:before {
+  content: "\e904";
+}
+
+/* line 44, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-graduation-cap:before {
+  content: "\e905";
+}
+
+/* line 47, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-locked:before {
+  content: "\e906";
+}
+
+/* line 50, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-envelope:before {
+  content: "\e907";
+}
+
+/* line 53, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-paperplane:before {
+  content: "\e908";
+}
+
+/* line 56, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-mouse:before {
+  content: "\e909";
+}
+
+/* line 59, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-help:before {
+  content: "\e90a";
+}
+
+/* line 62, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-trending_up:before {
+  content: "\e90b";
+}
+
+/* line 65, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-devices:before {
+  content: "\e90c";
+}
+
+/* line 68, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-people_alt:before {
+  content: "\e90d";
+}
+
+/* line 71, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-phone_in_talk:before {
+  content: "\e90e";
+}
+
+/* line 74, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-clipboard:before {
+  content: "\e90f";
+}
+
+/* line 77, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-bullhorn:before {
+  content: "\e910";
+}
+
+/* line 80, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-pencil:before {
+  content: "\e911";
+}
+
+/* line 83, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-money:before {
+  content: "\e912";
+}
+
+/* line 86, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-handshake-o1:before {
+  content: "\e913";
+}
+
+/* line 89, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-phone-square:before {
+  content: "\e914";
+}
+
+/* line 92, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-pencil2:before {
+  content: "\e915";
+}
+
+/* line 95, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-folder-open:before {
+  content: "\e930";
+}
+
+/* line 98, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-ticket:before {
+  content: "\e939";
+}
+
+/* line 101, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-cart:before {
+  content: "\e93a";
+}
+
+/* line 104, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-phone:before {
+  content: "\e942";
+}
+
+/* line 107, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-phone-hang-up:before {
+  content: "\e943";
+}
+
+/* line 110, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-envelop:before {
+  content: "\e945";
+}
+
+/* line 113, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-clock:before {
+  content: "\e94e";
+}
+
+/* line 116, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-display:before {
+  content: "\e956";
+}
+
+/* line 119, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-laptop:before {
+  content: "\e957";
+}
+
+/* line 122, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-mobile:before {
+  content: "\e958";
+}
+
+/* line 125, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-mobile2:before {
+  content: "\e959";
+}
+
+/* line 128, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-drive:before {
+  content: "\e963";
+}
+
+/* line 131, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-search:before {
+  content: "\e986";
+}
+
+/* line 134, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-cog:before {
+  content: "\e994";
+}
+
+/* line 137, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-cogs:before {
+  content: "\e995";
+}
+
+/* line 140, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-stats-bars2:before {
+  content: "\e99d";
+}
+
+/* line 143, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-meter:before {
+  content: "\e9a6";
+}
+
+/* line 146, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-lab:before {
+  content: "\e9aa";
+}
+
+/* line 149, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-briefcase:before {
+  content: "\e9ae";
+}
+
+/* line 152, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-shield:before {
+  content: "\e9b4";
+}
+
+/* line 155, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-menu:before {
+  content: "\e9bd";
+}
+
+/* line 158, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-cloud:before {
+  content: "\e9c1";
+}
+
+/* line 161, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-cloud-download:before {
+  content: "\e9c2";
+}
+
+/* line 164, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-download3:before {
+  content: "\e9c7";
+}
+
+/* line 167, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-earth:before {
+  content: "\e9ca";
+}
+
+/* line 170, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-sun:before {
+  content: "\e9d4";
+}
+
+/* line 173, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-star-full:before {
+  content: "\e9d9";
+}
+
+/* line 176, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-point-up:before {
+  content: "\ea03";
+}
+
+/* line 179, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-question:before {
+  content: "\ea09";
+}
+
+/* line 182, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-cross:before {
+  content: "\ea0f";
+}
+
+/* line 185, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-shuffle:before {
+  content: "\ea30";
+}
+
+/* line 188, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-arrow-right:before {
+  content: "\ea34";
+}
+
+/* line 191, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-circle-up:before {
+  content: "\ea41";
+}
+
+/* line 194, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-circle-right:before {
+  content: "\ea42";
+}
+
+/* line 197, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-circle-down:before {
+  content: "\ea43";
+}
+
+/* line 200, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-circle-left:before {
+  content: "\ea44";
+}
+
+/* line 203, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-embed2:before {
+  content: "\ea80";
+}
+
+/* line 206, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-facebook2:before {
+  content: "\ea91";
+}
+
+/* line 209, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-instagram:before {
+  content: "\ea92";
+}
+
+/* line 212, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+/* line 215, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-github:before {
+  content: "\eab0";
+}
+
+/* line 218, ../NetMatters Projects/Portfolio/scss/utilities/_fonts.scss */
+.icon-linkedin:before {
+  content: "\eac9";
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1273,481 +1612,8 @@ h4, .h4 {
 
 /* line 5, ../NetMatters Projects/Portfolio/scss/modules/_icons.scss */
 .icon {
+  font-size: 24px;
   margin-top: 10px;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-briefcase {
-  background-image: url("../img/icons/briefcase.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-circle-down {
-  background-image: url("../img/icons/circle-down.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-circle-left {
-  background-image: url("../img/icons/circle-left.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-circle-right {
-  background-image: url("../img/icons/circle-right.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-circle-up {
-  background-image: url("../img/icons/circle-up.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-envelop {
-  background-image: url("../img/icons/envelop.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-facebook {
-  background-image: url("../img/icons/facebook.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-github {
-  background-image: url("../img/icons/github.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-graduation-cap {
-  background-image: url("../img/icons/graduation-cap.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-instagram {
-  background-image: url("../img/icons/instagram.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-laptop {
-  background-image: url("../img/icons/laptop.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-linkedin {
-  background-image: url("../img/icons/linkedin.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-menu {
-  background-image: url("../img/icons/menu.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-pencil {
-  background-image: url("../img/icons/pencil.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-phone_in_talk {
-  background-image: url("../img/icons/phone_in_talk.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-twitter {
-  background-image: url("../img/icons/twitter.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 148, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-weights {
-  background-image: url("../img/icons/weights.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 164, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-sun--coloured {
-  -webkit-mask-image: url(../img/icons/sun.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/sun.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #0b0b0b;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 164, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-moon-stroke--coloured {
-  -webkit-mask-image: url(../img/icons/moon-stroke.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/moon-stroke.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #f5f5f5;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-briefcase--whiten {
-  -webkit-mask-image: url(../img/icons/briefcase.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/briefcase.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-circle-down--whiten {
-  -webkit-mask-image: url(../img/icons/circle-down.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/circle-down.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-circle-left--whiten {
-  -webkit-mask-image: url(../img/icons/circle-left.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/circle-left.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-circle-right--whiten {
-  -webkit-mask-image: url(../img/icons/circle-right.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/circle-right.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-circle-up--whiten {
-  -webkit-mask-image: url(../img/icons/circle-up.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/circle-up.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-envelop--whiten {
-  -webkit-mask-image: url(../img/icons/envelop.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/envelop.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-facebook--whiten {
-  -webkit-mask-image: url(../img/icons/facebook.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/facebook.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-github--whiten {
-  -webkit-mask-image: url(../img/icons/github.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/github.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-graduation-cap--whiten {
-  -webkit-mask-image: url(../img/icons/graduation-cap.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/graduation-cap.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-instagram--whiten {
-  -webkit-mask-image: url(../img/icons/instagram.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/instagram.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-laptop--whiten {
-  -webkit-mask-image: url(../img/icons/laptop.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/laptop.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-linkedin--whiten {
-  -webkit-mask-image: url(../img/icons/linkedin.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/linkedin.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-menu--whiten {
-  -webkit-mask-image: url(../img/icons/menu.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/menu.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-pencil--whiten {
-  -webkit-mask-image: url(../img/icons/pencil.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/pencil.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-phone_in_talk--whiten {
-  -webkit-mask-image: url(../img/icons/phone_in_talk.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/phone_in_talk.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-twitter--whiten {
-  -webkit-mask-image: url(../img/icons/twitter.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/twitter.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
-}
-
-/* line 186, ../NetMatters Projects/Portfolio/scss/utilities/_mixins.scss */
-.icon-weights--whiten {
-  -webkit-mask-image: url(../img/icons/weights.svg);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-image: url(../img/icons/weights.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: #F5F5F0;
-  width: 1.5625em;
-  height: 1.5625em;
-  display: inline-block;
 }
 
 /* line 5, ../NetMatters Projects/Portfolio/scss/modules/_button.scss */
@@ -1957,12 +1823,12 @@ h4, .h4 {
 }
 
 /* line 62, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
-#sidebar-section #theme-toggle:has(.icon-sun--coloured) {
+#sidebar-section #theme-toggle:has(.icon-sun) {
   background-color: #bacf42;
 }
 
 /* line 65, ../NetMatters Projects/Portfolio/scss/modules/_sidebar.scss */
-#sidebar-section #theme-toggle:has(.icon-moon-stroke--coloured) {
+#sidebar-section #theme-toggle:has(.icon-moon-stroke) {
   background-color: #1b1b50;
 }
 

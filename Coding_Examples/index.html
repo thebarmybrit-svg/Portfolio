@@ -66,10 +66,10 @@
                     </ul>
                     <div class="sidebar-social-logos">
                         <a class="github" href="https://github.com/thebarmybrit-svg" target="_blank" rel="noopener">
-                            <span class="icon-github--whiten">&nbsp;</span>
+                            <span class="icon-github">&nbsp;</span>
                         </a>
                         <a class="linkedin" href="https://www.linkedin.com/in/alexander-brown-7591a9421/" target="_blank" rel="noopener">
-                            <span class="icon-linkedin--whiten">&nbsp;</span>
+                            <span class="icon-linkedin">&nbsp;</span>
                         </a>
                     </div>
                 </div>
@@ -112,10 +112,10 @@
             &lt;/ul&gt;
             &lt;div class="sidebar-social-logos"&gt;
                 &lt;a class="github" href="https://github.com" target="_blank" rel="noopener"&gt;
-                    &lt;span class="icon-github--whiten"&gt;&amp;nbsp;&lt;/span&gt;
+                    &lt;span class="icon-github"&gt;&amp;nbsp;&lt;/span&gt;
                 &lt;/a&gt;
                 &lt;a class="linkedin" href="https://linkedin.com" target="_blank" rel="noopener"&gt;
-                    &lt;span class="icon-linkedin--whiten"&gt;&amp;nbsp;&lt;/span&gt;
+                    &lt;span class="icon-linkedin"&gt;&amp;nbsp;&lt;/span&gt;
                 &lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -128,14 +128,114 @@
                                 Additionally, a Dark Mode toggle is used here to allow users to have a darker style if that is their preference. 
                                 The fuctionality of which is handled by Java and SCSS.</p>
                         </div>
-                        <!-- <div class="coding-example-slide">
-                            <h2></h2>
+                        <div class="coding-example-slide">
+                            <h2>Netmatters Homepage - SCSS</h2>
                             <div class="code-container">
-                                <pre><code class="code-raw"></code></pre>
+                                <pre><code class="code-raw">
+.article{
+        width: 100%;
+        align-self: baseline;
+        display: flex;
+        flex: 0 0 100%;
+        margin-bottom: $g-gutter-width;
+        z-index: 1; 
+
+        .icon-arrow-right{
+            padding: 0;
+        }
+        &amp;:not(:first-child):not(:last-child){
+            position: relative;
+            top: 0; 
+            transition: top $trns-duration ease;
+            @extend .centered;
+            background-color: $white;
+            box-shadow: 0px 0px 5px 2px $colour-shadow;
+            border-radius: $br--default;
+            padding: 0;
+
+            &amp;:hover {
+                top: -10px; 
+                transition: $trns-duration ease;
+                cursor: pointer;
+            }
+            .item{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%; 
+                .article-link{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 2;
+                }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+
+            .block{
+                padding: em(30px);
+            }
+            .user{
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                width: 100%;
+                border-top: 1px $black solid;
+                padding-top: em(30px);
+                margin-top: em(30px);
+                .details{
+                    padding-left: em(20px);
+                }
+            }
+        }
+        &amp;:last-child:hover{
+            text-decoration: underline;
+        }
+
+        @include mq(small) {
+            &amp;:first-child {
+                flex: 0 0 100%; // Full width row
+            }
+
+            &amp;:last-child {
+                flex: 0 0 100%; // Full width row
+            }
+
+            &amp;:not(:first-child):not(:last-child) {
+                flex: 1 1 0px; 
+                align-self: stretch;
+                display: grid; 
+            }
+            
+            &amp;:nth-child(n+4) {
+                display: none !important;
+            }
+        } 
+        @include mq(large) {
+           
+            &amp;:nth-child(n+4) {
+                display: grid !important; 
+            }
+
+            &amp;:last-child {
+                display: none !important;
+            }
+        }
+        
+    }
+                                </code></pre>
                             </div>
-                            <p></p>
-                            <p></p>
-                        </div> -->
+                            <p>agwgawg</p>
+                            <p>awgwagagawag</p>
+                        </div>
                     </div>
                 </div>
             </div>

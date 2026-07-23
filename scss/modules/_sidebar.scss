@@ -59,10 +59,10 @@
       margin: 0;
       transition: background-image $trns-duration ease;
     }
-    &:has(.icon-sun--coloured){
+    &:has(.icon-sun){
       background-color: $daybreak;
     }
-    &:has(.icon-moon-stroke--coloured){
+    &:has(.icon-moon-stroke){
       background-color: $nightfall;
     }
   }
