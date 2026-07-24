@@ -128,21 +128,11 @@
                                 Additionally, a Dark Mode toggle is used here to allow users to have a darker style if that is their preference. 
                                 The fuctionality of which is handled by Java and SCSS.</p>
                         </div>
-                        <div class="coding-example-slide">
+                        <div class="coding-examples-slide">
                             <h2>Netmatters Homepage - SCSS</h2>
                             <div class="code-container">
                                 <pre><code class="code-raw">
-.article{
-        width: 100%;
-        align-self: baseline;
-        display: flex;
-        flex: 0 0 100%;
-        margin-bottom: $g-gutter-width;
-        z-index: 1; 
 
-        .icon-arrow-right{
-            padding: 0;
-        }
         &amp;:not(:first-child):not(:last-child){
             position: relative;
             top: 0; 
@@ -196,45 +186,11 @@
                 }
             }
         }
-        &amp;:last-child:hover{
-            text-decoration: underline;
-        }
-
-        @include mq(small) {
-            &amp;:first-child {
-                flex: 0 0 100%; // Full width row
-            }
-
-            &amp;:last-child {
-                flex: 0 0 100%; // Full width row
-            }
-
-            &amp;:not(:first-child):not(:last-child) {
-                flex: 1 1 0px; 
-                align-self: stretch;
-                display: grid; 
-            }
-            
-            &amp;:nth-child(n+4) {
-                display: none !important;
-            }
-        } 
-        @include mq(large) {
-           
-            &amp;:nth-child(n+4) {
-                display: grid !important; 
-            }
-
-            &amp;:last-child {
-                display: none !important;
-            }
-        }
-        
-    }
                                 </code></pre>
                             </div>
-                            <p>agwgawg</p>
-                            <p>awgwagagawag</p>
+                            <p>The targets specifically the articles of the latest news section of the website, with declerations for the first and last child elsewhere in the file.</p>
+                            <p>This allows for a dynamic styling of the section, 
+                                allowing any future articles that are added before the last child to match the styling of the others in the section.</p>
                         </div>
                     </div>
                 </div>
