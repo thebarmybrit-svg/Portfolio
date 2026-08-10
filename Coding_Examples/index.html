@@ -192,6 +192,48 @@
                             <p>This allows for a dynamic styling of the section, 
                                 allowing any future articles that are added before the last child to match the styling of the others in the section.</p>
                         </div>
+                        <div class="coding-examples-slide">
+                            <h2>JavaScript Array Assignment - JavaScript</h2>
+                            <div class="code-container">
+                                <pre><code class="code-raw">
+// EMAIL FORM SUBMISSION
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const emailInput = document.getElementById('user-email');
+    const emailValue = emailInput.value.trim();
+    // Email Validation pattern
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Validate the email format
+    if (!emailPattern.test(emailValue)) {
+        // Show error popup if incorrect
+        alert(`The email "${emailValue}" you inputted is not an acceptable email address. 
+            \nPlease check the formatting and try again.`);
+        emailInput.style.borderColor = 'red';
+        emailInput.focus();
+        return; 
+    }
+
+    emailInput.style.borderColor = '';
+
+    // Render directly to UI
+    renderEntryToDOM(emailValue, currentImageDataUrl);
+
+    // Save permanently to localStorage
+    saveEntryToStorage(emailValue, currentImageDataUrl);
+
+    // Clean up interface for next entry
+    emailInput.value = '';
+    loadRandomImage();
+});
+                                </code></pre>
+                            </div>
+                            <p>This code allows the email form in the website to couple the desired email with the randomally generated image. 
+                                It also calls the function to create a new random image without needing to refresh the page to do so.</p>
+                            <p>It also has safeguards to check if the email is valid, 
+                                and uses functions that handle the implementation of the assigned parameters into the webpage. 
+                                The use of functions was nessisary to allow for decoupling of the code reliance on itself and for testing.</p>
+                        </div>
                     </div>
                 </div>
             </div>
