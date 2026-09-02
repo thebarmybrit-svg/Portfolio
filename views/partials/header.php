@@ -26,7 +26,7 @@
                             <div class="container">
                                 <div class="grid">
                                     <h1 class="typewriter-static"><?= htmlspecialchars($heading) ?></h1>
-                                    <a class="btn btn--nav" href="#coding-examples">
+                                    <a class="btn btn--nav" href="<?= htmlspecialchars($scroll) ?>">
                                         Scroll Down
                                         <em class="icon icon-circle-down"></em>
                                     </a>
