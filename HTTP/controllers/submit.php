@@ -1,5 +1,11 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Autoload PHPMailer classes
+require __DIR__ . '/vendor/autoload.php';
+
 // Helper Function to Parse .env file
 function loadEnv($path) {
     if (!file_exists($path)) {
@@ -46,7 +52,6 @@ $options = [
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-    // Log error securely in production, avoid exposing database info
     die("Database connection failed. Please try again later.");
 }
 
@@ -74,21 +79,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "Please enter a valid email address.";
     }
 
-    // Handle AJAX Responses
+    // Handle AJAX Responses for validation errors
     if (!empty($errors)) {
         echo json_encode([
             'success' => false, 
             'message' => implode('<br>', $errors)
         ]);
-        exit; // Stop processing further HTML page render
+        exit; 
     } else {
         try {
+            // Insert data into DB
             $sql = "INSERT INTO contact_submissions (first_name, surname, email, subject, message) 
                     VALUES (:first_name, :surname, :email, :subject, :message)";
             
             $stmt = $pdo->prepare($sql);
             
-            // Storing clean, raw data into DB (Sanitize/escape only when OUTPUTTING to HTML)
             $stmt->execute([
                 ':first_name' => $fname,
                 ':surname'    => $lname,
@@ -97,15 +102,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':message'    => $message ?: null
             ]);
 
+            //  Dispatch SMTP email notification via Mailtrap
+            $mail = new PHPMailer(true);
+
+            // Updated SMTP Server Settings matching your Mailtrap specifications
+            $mail->isSMTP();                                            
+            $mail->Host       = $_ENV['SMTP_HOST'] ?? 'live.smtp.mailtrap.io';
+            $mail->SMTPAuth   = true;                                   
+            $mail->Username   = $_ENV['SMTP_USER'] ?? 'api';
+            $mail->Password   = $_ENV['SMTP_PASS'] ?? 'YOUR_MAILTRAP_API_TOKEN'; // Set your actual key here or in .env
+            $mail->SMTPSecure = $_ENV['SMTP_SECURE'] ?? 'tls'; 
+            $mail->Port       = $_ENV['SMTP_PORT'] ?? 2525;                                    
+
+            // Email Headers
+            // Note: Mailtrap live streams enforce that 'From' aligns with your validated sending domain!
+            $mail->setFrom($_ENV['SMTP_FROM_EMAIL'] ?? 'no-reply@yourregistereddomain.com', 'Portfolio Contact Form');
+            $mail->addAddress('alexander.brown@netmatters-scs.com', 'Alexander Brown'); 
+            
+            // Set Reply-To as the person who filled out the form
+            $mail->addReplyTo($email, "$fname $lname");
+
+            // Email HTML Content
+            $mail->isHTML(true);                                  
+            $mail->Subject = $subject ? "Contact Form: $subject" : "New Contact Submission from $fname $lname";
+            
+            $emailBody = "
+                <h3>New Contact Form Submission</h3>
+                <p><strong>Name:</strong> " . htmlspecialchars($fname . ' ' . $lname) . "</p>
+                <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
+                <p><strong>Subject:</strong> " . htmlspecialchars($subject ?? 'None') . "</p>
+                <p><strong>Message:</strong><br/>" . nl2br(htmlspecialchars($message ?? '')) . "</p>
+            ";
+            
+            $mail->Body = $emailBody;
+            $mail->send();
+
+            // Return success response to AJAX handler
             echo json_encode([
                 'success' => true, 
                 'message' => 'Your message has been sent successfully!'
             ]);
             exit;
+
         } catch (\PDOException $e) {
             echo json_encode([
                 'success' => false, 
                 'message' => 'Database error. Please try again later.'
+            ]);
+            exit;
+        } catch (Exception $e) {
+            // Reaches here if DB works but Mailtrap rejects the delivery payload
+            echo json_encode([
+                'success' => false, 
+                'message' => 'Data saved, but the email notification failed to send.'
             ]);
             exit;
         }
