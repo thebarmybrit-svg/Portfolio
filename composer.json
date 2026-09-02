@@ -1,0 +1,10 @@
+{
+    "require": {
+        "laravel/framework": "^12.69"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/"
+        }
+    }
+}
