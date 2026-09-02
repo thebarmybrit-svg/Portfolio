@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Alexander&apos;s Portfolio - Coding Examples</title>
+        <title>Alexander&apos;s Portfolio - <?= htmlspecialchars($heading) ?></title>
         <meta http-equiv="X-UA-Compatable" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
@@ -25,7 +25,7 @@
                         <div class="header-container">
                             <div class="container">
                                 <div class="grid">
-                                    <h1 class="typewriter-static">Coding Examples</h1>
+                                    <h1 class="typewriter-static"><?= htmlspecialchars($heading) ?></h1>
                                     <a class="btn btn--nav" href="#coding-examples">
                                         Scroll Down
                                         <em class="icon icon-circle-down"></em>
