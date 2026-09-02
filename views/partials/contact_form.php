@@ -14,12 +14,12 @@
                 </h3>
                 <p>Or you can use the form on the right to send me a direct message. I will respond at the earliest convience</p>
             </div>
-            <form class="grid__col-sm--12  grid__col-lg--8 contact-form" method="get" action="#" accept-charset="UTF8">
+            <form class="grid__col-sm--12 grid__col-lg--8 contact-form" method="POST" action="/" accept-charset="UTF8">
                 <input type="text" name="fname" autocomplete="given-name" class="contact-firstname required-field" placeholder="First Name*">
                 <input type="text" name="lname" autocomplete="family-name" class="contact-surname required-field" placeholder="Surname*">
                 <input type="email" name="email" autocomplete="email" class="contact-email required-field" placeholder="Email Address*">
-                <input type="text" class="contact-subject" placeholder="Subject">
-                <textarea class="contact-message" placeholder="Message"></textarea>
+                <input type="text" name="subject" class="contact-subject" placeholder="Subject">
+                <textarea name="message" class="contact-message" placeholder="Message"></textarea>
                 <button class="btn btn--submit contact-submit" type="submit" disabled>
                     Send Email
                 </button>

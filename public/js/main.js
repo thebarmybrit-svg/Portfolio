@@ -1,6 +1,3 @@
-// Body
-// $('body').hide().fadeIn(400);
-
 // Dark Mode
 const themeToggle = document.getElementById('theme-toggle');
 const toggleIcon = themeToggle.querySelector('.toggle-icon');
