@@ -1,6 +1,6 @@
 <?php
 
-// 1. Helper Function to Parse .env file
+// Helper Function to Parse .env file
 function loadEnv($path) {
     if (!file_exists($path)) {
         return;
@@ -74,35 +74,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "Please enter a valid email address.";
     }
 
-    // Handle errors or insert into database
+    // Handle AJAX Responses
     if (!empty($errors)) {
-        foreach ($errors as $error) {
-            echo "<p style='color:red;'>" . htmlspecialchars($error) . "</p>";
-        }
-        echo "<p><a href='javascript:history.back()'>Go Back</a></p>";
-    } else {
-        $sql = "INSERT INTO contact_submissions (first_name, surname, email, subject, message) 
-                VALUES (:first_name, :surname, :email, :subject, :message)";
-        
-        $stmt = $pdo->prepare($sql);
-        
-        $success = $stmt->execute([
-            ':first_name' => htmlspecialchars($fname),
-            ':surname'    => htmlspecialchars($lname),
-            ':email'      => filter_var($email, FILTER_SANITIZE_EMAIL),
-            ':subject'    => $subject ? htmlspecialchars($subject) : null,
-            ':message'    => $message ? htmlspecialchars($message) : null
+        echo json_encode([
+            'success' => false, 
+            'message' => implode('<br>', $errors)
         ]);
+        exit; // Stop processing further HTML page render
+    } else {
+        try {
+            $sql = "INSERT INTO contact_submissions (first_name, surname, email, subject, message) 
+                    VALUES (:first_name, :surname, :email, :subject, :message)";
+            
+            $stmt = $pdo->prepare($sql);
+            
+            // Storing clean, raw data into DB (Sanitize/escape only when OUTPUTTING to HTML)
+            $stmt->execute([
+                ':first_name' => $fname,
+                ':surname'    => $lname,
+                ':email'      => filter_var($email, FILTER_SANITIZE_EMAIL),
+                ':subject'    => $subject ?: null,
+                ':message'    => $message ?: null
+            ]);
 
-        if ($success) {
-            echo "<p style='color:green;'>Thank you! Your message has been sent successfully.</p>";
-        } else {
-            echo "<p style='color:red;'>Something went wrong. Please try again later.</p>";
+            echo json_encode([
+                'success' => true, 
+                'message' => 'Your message has been sent successfully!'
+            ]);
+            exit;
+        } catch (\PDOException $e) {
+            echo json_encode([
+                'success' => false, 
+                'message' => 'Database error. Please try again later.'
+            ]);
+            exit;
         }
     }
-} else {
-    header("Location: index.html");
-    exit;
-}
-
+} 
 require base_path('views/index.view.php');

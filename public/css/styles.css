@@ -2094,33 +2094,40 @@ h4, .h4 {
   flex: 1 1 calc(50% - 15px);
   padding: 10px;
   border-radius: 0.4em;
+  border: 1px solid transparent;
+  transition: border-color 0.5s ease;
 }
 
-/* line 27, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
+/* line 29, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
 #contact-form-section .contact-form textarea::placeholder, #contact-form-section .contact-form input::placeholder {
   color: #56797f;
 }
 
 /* line 33, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
+#contact-form-section .contact-form textarea.error-field, #contact-form-section .contact-form input.error-field {
+  border-color: #cf1111 !important;
+}
+
+/* line 39, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
 #contact-form-section .contact-form .contact-firstname,
 #contact-form-section .contact-form .contact-surname {
   flex: 1 1 calc(50% - 7.5px) !important;
 }
 
-/* line 38, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
+/* line 44, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
 #contact-form-section .contact-form .contact-email,
 #contact-form-section .contact-form .contact-subject,
 #contact-form-section .contact-form .contact-message {
   flex: 1 0 100%;
 }
 
-/* line 46, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
+/* line 52, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
 #contact-form-section .contact-message {
   flex: 1 0 100% !important;
   min-height: 150px;
 }
 
-/* line 51, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
+/* line 57, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
 #contact-form-section .contact-submit {
   flex: 0 0 auto;
   margin-right: auto;
@@ -2129,9 +2136,37 @@ h4, .h4 {
   transition: color 0.5s ease;
 }
 
-/* line 57, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
+/* line 63, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
 #contact-form-section .contact-submit:disabled {
   color: var(--text-form-disabled);
+}
+
+/* line 68, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
+#contact-form-section #form-response {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* line 72, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
+#contact-form-section #form-response .response-message {
+  padding: 15px;
+  border-radius: 0.4em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 79, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
+#contact-form-section #form-response .response-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* line 85, ../NetMatters Projects/Portfolio/public/scss/modules/_contact_form.scss */
+#contact-form-section #form-response .response-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }
 
 /* line 7, ../NetMatters Projects/Portfolio/public/scss/modules/_about.scss */

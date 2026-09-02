@@ -166,38 +166,57 @@ $(window).on('load resize orientationchange', function() {
 const $requiredFields = $('.required-field');
 const $emailField = $('.contact-email');
 const $submitBtn = $('.contact-submit');
+const $formResponse = $('#form-response');
 
-// Submit button 
+// Submit button validation toggle
 $requiredFields.on('input', function() {
     let allFilled = true;    
-    // Check each textarea
     $requiredFields.each(function() {
         if ($(this).val().trim() === '') {
             allFilled = false;
             return false;
         }
     });
-
-    if (allFilled) {
-        $submitBtn.prop('disabled', false);
-    } else {
-        $submitBtn.prop('disabled', true);
-    }
-
+    $submitBtn.prop('disabled', !allFilled);
 });
 
-// Check Email Regex
+// Handle Form Submission with AJAX
 $('.contact-form').on('submit', function(e) {
-    const emailValue = $('.contact-email').val().trim();
+    e.preventDefault(); // Stop standard page redirection
+
+    const emailValue = $emailField.val().trim();
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
+    // Client-side validation check
     if (!emailRegex.test(emailValue)) {
-        alert('Please enter a valid email address.');
-        $('.contact-email').focus().css('border', '1px solid red');
-        e.preventDefault();
+        $formResponse.html('<div class="response-message response-error">Please enter a valid email address.</div>');
+        $emailField.focus().addClass('error-field');
         return false;
     }
-    $('.contact-email').css('border', '');
+    $emailField.removeClass('error-field');
+
+    // Send Form Data to PHP Endpoint asynchronously
+    $.ajax({
+        url: $(this).attr('action'),
+        type: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(response) {
+            if (response.success) {
+                // Success: Alert user and reset inputs
+                $formResponse.html('<div class="response-message response-success">' + response.message + '</div>');
+                $('.contact-form')[0].reset();
+                $submitBtn.prop('disabled', true);
+            } else {
+                // Server-side validation failed
+                $formResponse.html('<div class="response-message response-error">' + response.message + '</div>');
+            }
+        },
+        error: function() {
+            // General Network/Server connection failure
+            $formResponse.html('<div class="response-message response-error">An unexpected error occurred. Please try again later.</div>');
+        }
+    });
 });
 
 // Phone Regex

@@ -1,6 +1,7 @@
 <div id="contact-form-section">
     <div class="container">
         <div class="grid">
+            <div id="form-response"></div>
             <div class="grid__col-sm--12 grid__col-lg--5 contact-information">
                 <h2>Get in Touch</h2>
                 <p>If you wish to contatc me, please use the contact methods below</p>
@@ -14,7 +15,7 @@
                 </h3>
                 <p>Or you can use the form on the right to send me a direct message. I will respond at the earliest convience</p>
             </div>
-            <form class="grid__col-sm--12 grid__col-lg--8 contact-form" method="POST" action="/" accept-charset="UTF8">
+           <form class="grid__col-sm--12 grid__col-lg--8 contact-form" method="POST" action="/" accept-charset="UTF8" novalidate>
                 <input type="text" name="fname" autocomplete="given-name" class="contact-firstname required-field" placeholder="First Name*">
                 <input type="text" name="lname" autocomplete="family-name" class="contact-surname required-field" placeholder="Surname*">
                 <input type="email" name="email" autocomplete="email" class="contact-email required-field" placeholder="Email Address*">
