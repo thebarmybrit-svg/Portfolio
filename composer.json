@@ -1,6 +1,6 @@
 {
     "require": {
-        "laravel/framework": "^12.69"
+        "vlucas/phpdotenv": "^5.7"
     },
     "autoload": {
         "psr-4": {
