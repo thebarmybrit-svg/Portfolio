@@ -73,19 +73,70 @@ $('a[href^="#"]').on('click', function(e) {
     }, 500); 
 });
 
+// Consolidated Page Scrolling and Page Transitions
 $('.navigation-item a, .initials a').on('click', function(event) {
     var targetUrl = $(this).attr('href');
+    if (!targetUrl) return;
 
-    if (targetUrl && !targetUrl.startsWith('#')) {
+    // Check if the current page is the root homepage
+    var isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.php';
+
+    // 1. If clicked a pure hash anchor (#section) OR a home-relative anchor (/#section) while ALREADY on home
+    if (targetUrl.startsWith('#') || (targetUrl.startsWith('/#') && isHomepage)) {
+        event.preventDefault();
+        
+        // Isolate the hash ID (e.g., "/#projects-section" becomes "#projects-section")
+        var targetId = targetUrl.startsWith('/#') ? targetUrl.substring(1) : targetUrl;
+        var $targetElement = $(targetId);
+        var scrollTopPosition = 0;
+
+        if (targetId !== '#') {
+            if ($targetElement.length) {
+                scrollTopPosition = $targetElement.offset().top;
+            } else {
+                return; // Element not found, exit
+            }
+        }
+
+        // Animate smooth scrolling without reloading the page
+        $('html, body').animate({
+            scrollTop: scrollTopPosition
+        }, 500, function() {
+            // Update the URL hash in the browser address bar cleanly
+            if (targetId !== '#') {
+                history.pushState(null, null, targetId);
+            }
+        });
+    } 
+    // 2. If it's a standard cross-page navigation link (e.g., /about or /#section from a subpage)
+    else {
         event.preventDefault();
 
-        // Fade out the body opacity instead of display, preserving the canvas background
+        // Fade out body and redirect smoothly
         $('body').animate({ opacity: 0 }, 'slow', function() {
             window.location.href = targetUrl;
         });
     }
 });
+
+// Always fade the body back in smoothly on page entry
 $('body').animate({ opacity: 1 }, 'slow');
+
+// Handle incoming cross-page links with hashes (e.g., navigating from /about back to /#projects-section)
+$(window).on('load', function() {
+    if (window.location.hash) {
+        var $targetElement = $(window.location.hash);
+        if ($targetElement.length) {
+            // Small timeout prevents animation jumping while assets render
+            setTimeout(function() {
+                $('html, body').animate({
+                    scrollTop: $targetElement.offset().top
+                }, 500);
+            }, 150);
+        }
+    }
+});
+
 
 // Header
 // Typing cycle
