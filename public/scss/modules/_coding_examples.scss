@@ -32,7 +32,8 @@
                 display: grid; 
                 max-width: 100%;
                 overflow-x: auto;  
-                overflow-y: hidden;
+                overflow-y: hidden; 
+                height: auto;
             }
 
             .code-raw {
@@ -41,7 +42,9 @@
                 color: var(--text-coding-colour);
                 display: block;
                 text-align: left;
-                padding: 0 $g-gutter-width;
+                padding: $g-gutter-width;
+                height: auto;
+                min-height: max-content;
             }
         }
 

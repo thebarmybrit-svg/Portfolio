@@ -81,7 +81,7 @@ $('.navigation-item a, .initials a').on('click', function(event) {
     // Check if the current page is the root homepage
     var isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.php';
 
-    // 1. If clicked a pure hash anchor (#section) OR a home-relative anchor (/#section) while ALREADY on home
+    // If clicked a pure hash anchor (#section) OR a home-relative anchor (/#section) while ALREADY on home
     if (targetUrl.startsWith('#') || (targetUrl.startsWith('/#') && isHomepage)) {
         event.preventDefault();
         
@@ -108,7 +108,7 @@ $('.navigation-item a, .initials a').on('click', function(event) {
             }
         });
     } 
-    // 2. If it's a standard cross-page navigation link (e.g., /about or /#section from a subpage)
+    // If it's a standard cross-page navigation link (e.g., /about or /#section from a subpage)
     else {
         event.preventDefault();
 
@@ -204,7 +204,8 @@ $('.coding-examples-grid').slick({
     slidesToScroll: 1,
     infinite: true,
     dots: true,
-    arrows: false
+    arrows: true,
+    adaptiveHeight: true
 });
 
 // Bind cleanly to standard browser viewport actions
