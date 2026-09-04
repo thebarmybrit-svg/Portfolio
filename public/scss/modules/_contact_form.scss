@@ -1,0 +1,92 @@
+
+// ==========================================================================
+// Contact Form
+// ==========================================================================
+
+#contact-form-section{
+    @extend %sec-gap;
+    .contact-information{
+        align-self: flex-start;
+        h2{
+            margin-top: 0;
+        }
+    }
+
+    .contact-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $g-gutter-width;
+        position: relative;
+
+        textarea, input {
+            background-color: var(--form-colour);
+            color: var(--text-form-colour);
+            flex: 1 1 calc(50% - 15px);
+            padding: 10px;
+            border-radius: $br--default;
+            border: 1px solid transparent; 
+            transition: border-color $trns-duration ease;
+            &::placeholder{
+                color: lighten($colour-form-font, 20%);
+            }
+
+            &.error-field {
+                border-color: $error-red !important;
+            }
+            
+        }
+        
+        .contact-firstname,
+        .contact-surname {
+           flex: 1 1 calc(50% - 7.5px) !important;
+        }   
+
+        .contact-email,
+        .contact-subject,
+        .contact-message {
+            flex: 1 0 100%;
+        }
+    
+    }
+
+    .contact-message {
+        flex: 1 0 100% !important;
+        min-height: 150px;
+    }
+
+    .contact-submit {
+        flex: 0 0 auto;
+        margin-right: auto;
+        margin-top: 10px;
+        color: var(--text-confirm-colour);
+        transition: color $trns-duration ease;
+        &:disabled{
+            color: var(--text-form-disabled);
+        }
+    }
+
+    #form-response {
+        margin-bottom: 20px;
+        width: 100%;
+
+        .response-message {
+            padding: 15px;
+            border-radius: $br--default;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .response-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .response-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    }
+    
+}
