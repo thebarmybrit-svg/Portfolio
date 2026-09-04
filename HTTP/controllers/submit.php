@@ -1,13 +1,12 @@
 <?php
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-// Import Mailtrap SDK Classes (Commented out for testing)
-// use Mailtrap\MailtrapClient;
-// use Mailtrap\Mime\MailtrapEmail;
-// use Symfony\Component\Mime\Address;
+// Import PHPMailer classes into the global namespace
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 // Autoload Composer classes (moves up 2 levels out of HTTP/controllers)
 require dirname(__DIR__, 2) . '/vendor/autoload.php';
@@ -94,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit; 
     } else {
         try {
-            // Insert data into DB (created_at is automatically handled by MySQL)
+            // Insert data into DB
             $sql = "INSERT INTO contact_submissions (first_name, surname, email, subject, message) 
                     VALUES (:first_name, :surname, :email, :subject, :message)";
             
@@ -108,42 +107,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':message'    => $message ?: null
             ]);
 
-            /* =========================================================================
-            // MAILTRAP API SEGMENTS (COMMENTED OUT FOR DATABASE TESTING)
             // =========================================================================
-            $apiKey = $_ENV['SMTP_PASS'] ?? 'YOUR_REAL_MAILTRAP_API_TOKEN_HERE';
-            $mailtrap = MailtrapClient::initSendingEmails(apiKey: $apiKey);
+            // SMTP EMAIL DISPATCH (PHPMailer)
+            // =========================================================================
+            $mail = new PHPMailer(true);
 
+            // Server settings
+            $mail->isSMTP();                                            // Send via SMTP
+            $mail->Host       = $_ENV['SMTP_HOST'] ?? 'live.smtp.mailtrap.io'; // Your SMTP server
+            $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+            $mail->Username   = $_ENV['SMTP_USER'] ?? '';               // SMTP username
+            $mail->Password   = $_ENV['SMTP_PASS'] ?? '';               // SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption
+            $mail->Port       = 2525;                                   // cPanel STARTTLS custom port
+
+            // Recipients
+            $fromEmail = $_ENV['SMTP_FROM_EMAIL'] ?? 'verified-sender@demomailtrap.co';
+            $mail->setFrom($fromEmail, 'Portfolio Contact Form');
+            $mail->addAddress('alexander.brown@netmatters-scs.com', 'Alexander Brown');
+            $mail->addReplyTo($email, "$fname $lname"); // Enables replying directly to the user
+
+            // Content
             $emailSubject = $subject ? "Contact Form: $subject" : "New Contact Submission from $fname $lname";
-            $emailHtmlBody = "
+            $mail->Subject = $emailSubject;
+            
+            $mail->isHTML(true);
+            $mail->Body = "
                 <h3>New Contact Form Submission</h3>
                 <p><strong>Name:</strong> " . htmlspecialchars($fname . ' ' . $lname) . "</p>
                 <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
                 <p><strong>Subject:</strong> " . htmlspecialchars($subject ?? 'None') . "</p>
                 <p><strong>Message:</strong><br/>" . nl2br(htmlspecialchars($message ?? '')) . "</p>
             ";
+            
+            // Plain text alternative
+            $mail->AltBody = "New Contact Form Submission\n\nName: $fname $lname\nEmail: $email\nSubject: " . ($subject ?? 'None') . "\nMessage:\n" . ($message ?? '');
 
-            $mailtrapEmail = (new MailtrapEmail())
-                ->from(new Address(
-                    $_ENV['SMTP_FROM_EMAIL'] ?? 'verified-sender@demomailtrap.co', 
-                    'Portfolio Contact Form'
-                ))
-                ->to(new Address('alexander.brown@netmatters-scs.com', 'Alexander Brown'))
-                ->replyTo(new Address($email, "$fname $lname"))
-                ->subject($emailSubject)
-                ->html($emailHtmlBody)
-                ->category('Contact Form');
+            $mail->send();
+            // =========================================================================
 
-            $mailtrap->send($mailtrapEmail);
-            ========================================================================= */
-
-            // Return success response directly after a successful DB entry
+            // Return success response after a successful DB entry and Email transmission
             echo json_encode([
                 'success' => true, 
-                'message' => 'Your message has been saved successfully to the database!'
+                'message' => 'Your message has been saved and sent successfully!'
             ]);
             exit;
 
+        } catch (Exception $e) {
+            // Catches PHPMailer specific transmission failures
+            echo json_encode([
+                'success' => false, 
+                'message' => 'Database saved, but email notification failed. Error: ' . $mail->ErrorInfo
+            ]);
+            exit;
         } catch (\PDOException $e) {
             echo json_encode([
                 'success' => false, 
@@ -159,5 +175,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 } 
-
 require base_path('views/index.view.php');
