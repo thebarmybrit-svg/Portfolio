@@ -9,7 +9,10 @@
                     <div class="projects-grid">
                         <div class="projects-example">
                             <div class="image-container">
-                                <img class="img img--project" src="img/proj-img/Portfolio_Page.png" alt="Webpage Project">
+                                <picture>
+                                    <source srcset="img/proj-img/Portfolio_Page.webp" type="image/webp">
+                                    <img class="img img--project" src="img/proj-img/Portfolio_Page.png" width="500" height="250" alt="Webpage Project" loading="lazy">
+                                </picture>
                             </div>
                             <div class="block">
                                 <h3>Portfolio</h3>
@@ -26,7 +29,10 @@
                         </div>
                         <div class="projects-example">
                             <div class="image-container">
-                                <img class="img img--project" src="img/proj-img/netmatter_homepage.png" alt="Webpage Project">
+                                <picture>
+                                    <source srcset="img/proj-img/netmatter_homepage.webp" type="image/webp">
+                                    <img class="img img--project" src="img/proj-img/netmatter_homepage.png" width="500" height="250" alt="Webpage Project" loading="lazy">
+                                </picture>
                             </div>
                             <div class="block">
                                 <h3>Netmatters Homepage</h3>
@@ -41,7 +47,10 @@
                         </div>
                         <div class="projects-example">
                             <div class="image-container">
-                                <img class="img img--project" src="img/proj-img/Array_page.png" alt="Webpage Project">
+                                <picture>
+                                    <source srcset="img/proj-img/Array_page.webp" type="image/webp">
+                                    <img class="img img--project" src="img/proj-img/Array_page.png" width="500" height="250" alt="Webpage Project" loading="lazy">
+                                </picture>
                             </div>
                             <div class="block">
                                 <h3>JavaScript Array</h3>
@@ -56,7 +65,10 @@
                         </div>
                         <div class="projects-example">
                             <div class="image-container">
-                                <img class="img img--project" src="img/1560x878.png" alt="Webpage Project">
+                                <picture>
+                                    <source srcset="img/1560x878.webp" type="image/webp">
+                                    <img class="img img--project" src="img/1560x878.png" width="500" height="250" alt="Webpage Project" loading="lazy">
+                                </picture>
                             </div>
                             <div class="block">
                                 <h3>TITLE_04</h3>
