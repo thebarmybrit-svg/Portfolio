@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Alexander&apos;s Portfolio</title>
         <meta http-equiv="X-UA-Compatable" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
+        <meta name="description" content="<?= htmlspecialchars($description) ?>">
         <link rel="stylesheet" href="js/pageCrossfade/pagecrossfade.css">
-        <link rel="stylesheet" href="js/slick/slick.css"/>
+        <link rel="stylesheet" href="js/slick/slick.css">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>

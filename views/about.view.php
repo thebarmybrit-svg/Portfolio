@@ -14,8 +14,8 @@
                             <p></p>
                         </div>
                         <div class="about_me_information">
+                            <h2>Education</h2>
                             <ul class="education">
-                                <h2>Education</h2>
                                 <li class="item--education">
                                     <span class="icon icon-graduation-cap"></span>
                                     <strong>2012-2016: </strong>2:1 Bsc Computer Science Degree from the University of Heartfordshite
@@ -25,16 +25,16 @@
                                     <strong>2026: </strong>SCS Scheme
                                 </li>
                             </ul>
+                            <h2>Work Experience</h2>
                             <ul class="work_experience">
-                                <h2>Work Experience</h2>
                                 <li class="item--work">
                                     <span class="icon icon-briefcase"></span>
                                     <strong>2016-2017: </strong>
                                     App based consultancy work
                                 </li>
                             </ul>
+                            <h2>IT Experience</h2>
                             <ul class="it_experience">
-                                <h2>IT Experience</h2>
                                 <li class="item--work">
                                     <span class="icon icon-laptop"></span>
                                     HTML
@@ -52,8 +52,8 @@
                                     Microsoft Suite
                                 </li>
                             </ul>
+                            <h2>Strengths</h2>
                             <ul class="strengths">
-                                <h2>Strengths</h2>
                                 <li class="item--strengths">
                                     <span class="icon icon-weights"></span>
                                     Team player, helping where ever I can in group projects.
@@ -71,8 +71,8 @@
                                     Keen to learn new skills and tools for better workflow.
                                 </li>
                             </ul>
+                            <h2>Hobbies</h2>
                             <ul class="hobbies">
-                                <h2>Hobbies</h2>
                                 <li class="item--strengths">
                                     <span class="icon icon-pencil"></span>
                                     Digital Drawing

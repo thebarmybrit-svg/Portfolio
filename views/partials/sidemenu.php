@@ -4,7 +4,7 @@
             <div class="initials">
                 <a class="h1" href="/">AB</a>
             </div>
-            <a id="theme-toggle" class="btn btn--dark" aria-label="Toggle dark mode">
+            <a id="theme-toggle" class="btn btn--dark" role="button" aria-label="Toggle dark mode">
                 <em class="toggle-icon icon"></em>
             </a>
             <ul class="navigation">

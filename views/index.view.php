@@ -7,9 +7,6 @@
                 <h2>Projects</h2>
                 <div class="container">
                     <div class="projects-grid">
-                        <!-- <div class="grid__col-md--9 grid__col-lg--13 projects-title">
-                            <h2>Projects</h2>
-                        </div> -->
                         <div class="projects-example">
                             <div class="image-container">
                                 <img class="img img--project" src="img/proj-img/Portfolio_Page.png" alt="Webpage Project">
