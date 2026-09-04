@@ -1,10 +1,16 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
-// Autoload PHPMailer classes
-require __DIR__ . '/vendor/autoload.php';
+// Import Mailtrap SDK Classes (Commented out for testing)
+// use Mailtrap\MailtrapClient;
+// use Mailtrap\Mime\MailtrapEmail;
+// use Symfony\Component\Mime\Address;
+
+// Autoload Composer classes (moves up 2 levels out of HTTP/controllers)
+require dirname(__DIR__, 2) . '/vendor/autoload.php';
 
 // Helper Function to Parse .env file
 function loadEnv($path) {
@@ -32,12 +38,12 @@ function loadEnv($path) {
     }
 }
 
-// Load environment variables (assumes .env is in the same directory)
-loadEnv(__DIR__ . '/.env');
+// Load environment variables (moves up 2 levels out of HTTP/controllers)
+loadEnv(dirname(__DIR__, 2) . '/.env');
 
-// 2. Database Connection using .env values
+// Database Connection using your explicit .env variables
 $host    = $_ENV['DB_HOST'] ?? 'localhost';
-$db      = $_ENV['DB_NAME'] ?? 'portfolio';
+$db      = $_ENV['DB_NAME'] ?? 'database';
 $user    = $_ENV['DB_USER'] ?? 'root';
 $pass    = $_ENV['DB_PASSWORD'] ?? '';
 $charset = 'utf8mb4';
@@ -55,7 +61,7 @@ try {
     die("Database connection failed. Please try again later.");
 }
 
-// 3. Process form submission
+// Process form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $fname   = isset($_POST['fname']) ? trim($_POST['fname']) : '';
@@ -88,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit; 
     } else {
         try {
-            // Insert data into DB
+            // Insert data into DB (created_at is automatically handled by MySQL)
             $sql = "INSERT INTO contact_submissions (first_name, surname, email, subject, message) 
                     VALUES (:first_name, :surname, :email, :subject, :message)";
             
@@ -102,45 +108,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':message'    => $message ?: null
             ]);
 
-            //  Dispatch SMTP email notification via Mailtrap
-            $mail = new PHPMailer(true);
+            /* =========================================================================
+            // MAILTRAP API SEGMENTS (COMMENTED OUT FOR DATABASE TESTING)
+            // =========================================================================
+            $apiKey = $_ENV['SMTP_PASS'] ?? 'YOUR_REAL_MAILTRAP_API_TOKEN_HERE';
+            $mailtrap = MailtrapClient::initSendingEmails(apiKey: $apiKey);
 
-            // Updated SMTP Server Settings matching your Mailtrap specifications
-            $mail->isSMTP();                                            
-            $mail->Host       = $_ENV['SMTP_HOST'] ?? 'live.smtp.mailtrap.io';
-            $mail->SMTPAuth   = true;                                   
-            $mail->Username   = $_ENV['SMTP_USER'] ?? 'api';
-            $mail->Password   = $_ENV['SMTP_PASS'] ?? 'YOUR_MAILTRAP_API_TOKEN'; // Set your actual key here or in .env
-            $mail->SMTPSecure = $_ENV['SMTP_SECURE'] ?? 'tls'; 
-            $mail->Port       = $_ENV['SMTP_PORT'] ?? 2525;                                    
-
-            // Email Headers
-            // Note: Mailtrap live streams enforce that 'From' aligns with your validated sending domain!
-            $mail->setFrom($_ENV['SMTP_FROM_EMAIL'] ?? 'no-reply@yourregistereddomain.com', 'Portfolio Contact Form');
-            $mail->addAddress('alexander.brown@netmatters-scs.com', 'Alexander Brown'); 
-            
-            // Set Reply-To as the person who filled out the form
-            $mail->addReplyTo($email, "$fname $lname");
-
-            // Email HTML Content
-            $mail->isHTML(true);                                  
-            $mail->Subject = $subject ? "Contact Form: $subject" : "New Contact Submission from $fname $lname";
-            
-            $emailBody = "
+            $emailSubject = $subject ? "Contact Form: $subject" : "New Contact Submission from $fname $lname";
+            $emailHtmlBody = "
                 <h3>New Contact Form Submission</h3>
                 <p><strong>Name:</strong> " . htmlspecialchars($fname . ' ' . $lname) . "</p>
                 <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
                 <p><strong>Subject:</strong> " . htmlspecialchars($subject ?? 'None') . "</p>
                 <p><strong>Message:</strong><br/>" . nl2br(htmlspecialchars($message ?? '')) . "</p>
             ";
-            
-            $mail->Body = $emailBody;
-            $mail->send();
 
-            // Return success response to AJAX handler
+            $mailtrapEmail = (new MailtrapEmail())
+                ->from(new Address(
+                    $_ENV['SMTP_FROM_EMAIL'] ?? 'verified-sender@demomailtrap.co', 
+                    'Portfolio Contact Form'
+                ))
+                ->to(new Address('alexander.brown@netmatters-scs.com', 'Alexander Brown'))
+                ->replyTo(new Address($email, "$fname $lname"))
+                ->subject($emailSubject)
+                ->html($emailHtmlBody)
+                ->category('Contact Form');
+
+            $mailtrap->send($mailtrapEmail);
+            ========================================================================= */
+
+            // Return success response directly after a successful DB entry
             echo json_encode([
                 'success' => true, 
-                'message' => 'Your message has been sent successfully!'
+                'message' => 'Your message has been saved successfully to the database!'
             ]);
             exit;
 
@@ -150,14 +150,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'message' => 'Database error. Please try again later.'
             ]);
             exit;
-        } catch (Exception $e) {
-            // Reaches here if DB works but Mailtrap rejects the delivery payload
+        } catch (\Exception $e) {
             echo json_encode([
                 'success' => false, 
-                'message' => 'Data saved, but the email notification failed to send.'
+                'message' => 'An unexpected issue occurred.'
             ]);
             exit;
         }
     }
 } 
+
 require base_path('views/index.view.php');

@@ -216,6 +216,11 @@ $('.contact-form').on('submit', function(e) {
             // General Network/Server connection failure
             $formResponse.html('<div class="response-message response-error">An unexpected error occurred. Please try again later.</div>');
         }
+        // error: function(xhr, status, error) {
+        //     // This catches and prints out the exact PHP compilation error
+        //     let customErrorMessage = xhr.responseText ? xhr.responseText : "Internal Server Error (500)";
+        //     $formResponse.html('<div class="response-message response-error">Error: ' + customErrorMessage + '</div>');
+        // }
     });
 });
 
